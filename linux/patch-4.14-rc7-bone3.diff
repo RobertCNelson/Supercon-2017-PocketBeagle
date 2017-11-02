@@ -1,5 +1,5 @@
 diff --git a/.gitignore b/.gitignore
-index 0c39aa20b6ba..bdcc9d8bdd1f 100644
+index 0c39aa2..bdcc9d8 100644
 --- a/.gitignore
 +++ b/.gitignore
 @@ -115,3 +115,7 @@ all.config
@@ -12,7 +12,7 @@ index 0c39aa20b6ba..bdcc9d8bdd1f 100644
 +*.dtbo
 diff --git a/Documentation/ABI/testing/sysfs-devices-platform-bone_capemgr b/Documentation/ABI/testing/sysfs-devices-platform-bone_capemgr
 new file mode 100644
-index 000000000000..e2df61358123
+index 0000000..e2df613
 --- /dev/null
 +++ b/Documentation/ABI/testing/sysfs-devices-platform-bone_capemgr
 @@ -0,0 +1,63 @@
@@ -81,7 +81,7 @@ index 000000000000..e2df61358123
 +		config-option		- displayed but ignored
 diff --git a/Documentation/ABI/testing/sysfs-firmware-devicetree-overlays b/Documentation/ABI/testing/sysfs-firmware-devicetree-overlays
 new file mode 100644
-index 000000000000..88d15498a21b
+index 0000000..88d1549
 --- /dev/null
 +++ b/Documentation/ABI/testing/sysfs-firmware-devicetree-overlays
 @@ -0,0 +1,52 @@
@@ -138,7 +138,7 @@ index 000000000000..88d15498a21b
 +Description:
 +		The full-path of the target of the fragment
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 05496622b4ef..22139850be41 100644
+index 0549662..2213985 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2796,6 +2796,8 @@
@@ -151,7 +151,7 @@ index 05496622b4ef..22139850be41 100644
  			See Documentation/debugging-via-ohci1394.txt for more
  			info.
 diff --git a/Documentation/devicetree/bindings/arm/omap/omap.txt b/Documentation/devicetree/bindings/arm/omap/omap.txt
-index 2ecc712bf707..e026391599fb 100644
+index 2ecc712..e026391 100644
 --- a/Documentation/devicetree/bindings/arm/omap/omap.txt
 +++ b/Documentation/devicetree/bindings/arm/omap/omap.txt
 @@ -24,6 +24,8 @@ Optional properties:
@@ -165,7 +165,7 @@ index 2ecc712bf707..e026391599fb 100644
  
 diff --git a/Documentation/devicetree/bindings/misc/bone_capemgr.txt b/Documentation/devicetree/bindings/misc/bone_capemgr.txt
 new file mode 100644
-index 000000000000..7e4fbc982cea
+index 0000000..7e4fbc9
 --- /dev/null
 +++ b/Documentation/devicetree/bindings/misc/bone_capemgr.txt
 @@ -0,0 +1,111 @@
@@ -282,7 +282,7 @@ index 000000000000..7e4fbc982cea
 +};
 diff --git a/Documentation/devicetree/configfs-overlays.txt b/Documentation/devicetree/configfs-overlays.txt
 new file mode 100644
-index 000000000000..5fa43e064307
+index 0000000..5fa43e0
 --- /dev/null
 +++ b/Documentation/devicetree/configfs-overlays.txt
 @@ -0,0 +1,31 @@
@@ -318,7 +318,7 @@ index 000000000000..5fa43e064307
 +intended to be used by hardware managers in the kernel, while the copy interface
 +make sense for developers (since it avoids problems with namespaces).
 diff --git a/Documentation/devicetree/overlay-notes.txt b/Documentation/devicetree/overlay-notes.txt
-index eb7f2685fda1..d4ebb42ab3c8 100644
+index eb7f268..d4ebb42 100644
 --- a/Documentation/devicetree/overlay-notes.txt
 +++ b/Documentation/devicetree/overlay-notes.txt
 @@ -98,6 +98,14 @@ Finally, if you need to remove all overlays in one-go, just call
@@ -364,7 +364,7 @@ index eb7f2685fda1..d4ebb42ab3c8 100644
 +of the root.
 diff --git a/Documentation/misc-devices/bone_capemgr.txt b/Documentation/misc-devices/bone_capemgr.txt
 new file mode 100644
-index 000000000000..2a8c766b4898
+index 0000000..2a8c766
 --- /dev/null
 +++ b/Documentation/misc-devices/bone_capemgr.txt
 @@ -0,0 +1,63 @@
@@ -432,7 +432,7 @@ index 000000000000..2a8c766b4898
 +Applying the device tree overlay makes the cape operational, as if it was part
 +of the kernel's booting device tree.
 diff --git a/Documentation/pwm.txt b/Documentation/pwm.txt
-index 8fbf0aa3ba2d..72db8dd15f53 100644
+index 8fbf0aa..72db8dd 100644
 --- a/Documentation/pwm.txt
 +++ b/Documentation/pwm.txt
 @@ -85,9 +85,11 @@ will find:
@@ -450,7 +450,7 @@ index 8fbf0aa3ba2d..72db8dd15f53 100644
    period
      The total period of the PWM signal (read/write).
 diff --git a/MAINTAINERS b/MAINTAINERS
-index af0cb69f6a3e..69f0c0e4e151 100644
+index af0cb69..69f0c0e 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -2582,6 +2582,14 @@ L:	netdev@vger.kernel.org
@@ -469,7 +469,7 @@ index af0cb69f6a3e..69f0c0e4e151 100644
  M:	Luis de Bethencourt <luisbg@kernel.org>
  M:	Salah Triki <salah.triki@gmail.com>
 diff --git a/arch/arm/Makefile b/arch/arm/Makefile
-index 817e5cfef83a..343c3a179295 100644
+index 817e5cf..343c3a1 100644
 --- a/arch/arm/Makefile
 +++ b/arch/arm/Makefile
 @@ -13,7 +13,12 @@
@@ -487,7 +487,7 @@ index 817e5cfef83a..343c3a179295 100644
  LDFLAGS_vmlinux	+= --be8
  LDFLAGS_MODULE	+= --be8
 diff --git a/arch/arm/boot/Makefile b/arch/arm/boot/Makefile
-index 50f8d1be7fcb..2c30c4491679 100644
+index 50f8d1b..2c30c44 100644
 --- a/arch/arm/boot/Makefile
 +++ b/arch/arm/boot/Makefile
 @@ -29,6 +29,10 @@ export ZRELADDR INITRD_PHYS PARAMS_PHYS
@@ -502,7 +502,7 @@ index 50f8d1be7fcb..2c30c4491679 100644
  
  $(obj)/xipImage: vmlinux FORCE
 diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
-index faf46abaa4a2..a4f6c5d90b56 100644
+index faf46ab..a4f6c5d 100644
 --- a/arch/arm/boot/dts/Makefile
 +++ b/arch/arm/boot/dts/Makefile
 @@ -1,11 +1,17 @@
@@ -550,7 +550,7 @@ index faf46abaa4a2..a4f6c5d90b56 100644
  	omap4-var-dvk-om44.dtb \
 diff --git a/arch/arm/boot/dts/am335x-abbbi.dts b/arch/arm/boot/dts/am335x-abbbi.dts
 new file mode 100644
-index 000000000000..43efeadea16c
+index 0000000..43efead
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-abbbi.dts
 @@ -0,0 +1,163 @@
@@ -719,7 +719,7 @@ index 000000000000..43efeadea16c
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-common-no-capemgr.dtsi b/arch/arm/boot/dts/am335x-bone-common-no-capemgr.dtsi
 new file mode 100644
-index 000000000000..d0886508eff1
+index 0000000..d088650
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-common-no-capemgr.dtsi
 @@ -0,0 +1,364 @@
@@ -1089,7 +1089,7 @@ index 000000000000..d0886508eff1
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-common-universal.dtsi b/arch/arm/boot/dts/am335x-bone-common-universal.dtsi
 new file mode 100644
-index 000000000000..781e33fe3d26
+index 0000000..781e33f
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-common-universal.dtsi
 @@ -0,0 +1,2052 @@
@@ -3146,7 +3146,7 @@ index 000000000000..781e33fe3d26
 +	};
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-common.dtsi b/arch/arm/boot/dts/am335x-bone-common.dtsi
-index 48a15fc641f2..f13dc45a4367 100644
+index 48a15fc..f13dc45 100644
 --- a/arch/arm/boot/dts/am335x-bone-common.dtsi
 +++ b/arch/arm/boot/dts/am335x-bone-common.dtsi
 @@ -29,14 +29,14 @@
@@ -3369,7 +3369,7 @@ index 48a15fc641f2..f13dc45a4367 100644
  };
 diff --git a/arch/arm/boot/dts/am335x-bone-emmc-in-reset.dtsi b/arch/arm/boot/dts/am335x-bone-emmc-in-reset.dtsi
 new file mode 100644
-index 000000000000..7d8f673229c0
+index 0000000..7d8f673
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-emmc-in-reset.dtsi
 @@ -0,0 +1,18 @@
@@ -3393,7 +3393,7 @@ index 000000000000..7d8f673229c0
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-jtag.dtsi b/arch/arm/boot/dts/am335x-bone-jtag.dtsi
 new file mode 100644
-index 000000000000..603ef0a4d7b2
+index 0000000..603ef0a
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-jtag.dtsi
 @@ -0,0 +1,20 @@
@@ -3419,7 +3419,7 @@ index 000000000000..603ef0a4d7b2
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-can0.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-can0.dtsi
 new file mode 100644
-index 000000000000..09612160b10d
+index 0000000..0961216
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-can0.dtsi
 @@ -0,0 +1,45 @@
@@ -3470,7 +3470,7 @@ index 000000000000..09612160b10d
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-can1.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-can1.dtsi
 new file mode 100644
-index 000000000000..9e264132cc46
+index 0000000..9e26413
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-can1.dtsi
 @@ -0,0 +1,45 @@
@@ -3521,7 +3521,7 @@ index 000000000000..9e264132cc46
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-emmc.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-emmc.dtsi
 new file mode 100644
-index 000000000000..22cf4621b357
+index 0000000..22cf462
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-emmc.dtsi
 @@ -0,0 +1,88 @@
@@ -3615,7 +3615,7 @@ index 000000000000..22cf4621b357
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-i2c2.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-i2c2.dtsi
 new file mode 100644
-index 000000000000..abf3b57522e3
+index 0000000..abf3b57
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-i2c2.dtsi
 @@ -0,0 +1,45 @@
@@ -3666,7 +3666,7 @@ index 000000000000..abf3b57522e3
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-nxp-hdmi.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-nxp-hdmi.dtsi
 new file mode 100644
-index 000000000000..5205fa0f9a95
+index 0000000..5205fa0
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-nxp-hdmi.dtsi
 @@ -0,0 +1,120 @@
@@ -3792,7 +3792,7 @@ index 000000000000..5205fa0f9a95
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-panel-1024x600-24bit.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-panel-1024x600-24bit.dtsi
 new file mode 100644
-index 000000000000..65e5fbb0cfcc
+index 0000000..65e5fbb
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-panel-1024x600-24bit.dtsi
 @@ -0,0 +1,151 @@
@@ -3949,7 +3949,7 @@ index 000000000000..65e5fbb0cfcc
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-spi0.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-spi0.dtsi
 new file mode 100644
-index 000000000000..354e66ad4f04
+index 0000000..354e66a
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-spi0.dtsi
 @@ -0,0 +1,51 @@
@@ -4006,7 +4006,7 @@ index 000000000000..354e66ad4f04
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-spi1.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-spi1.dtsi
 new file mode 100644
-index 000000000000..bff7f8dae839
+index 0000000..bff7f8d
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-spi1.dtsi
 @@ -0,0 +1,27 @@
@@ -4039,7 +4039,7 @@ index 000000000000..bff7f8dae839
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-spi1a.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-spi1a.dtsi
 new file mode 100644
-index 000000000000..62874c892ff7
+index 0000000..62874c8
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-spi1a.dtsi
 @@ -0,0 +1,28 @@
@@ -4073,7 +4073,7 @@ index 000000000000..62874c892ff7
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-ttyS1.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS1.dtsi
 new file mode 100644
-index 000000000000..ae5b813f007a
+index 0000000..ae5b813
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS1.dtsi
 @@ -0,0 +1,48 @@
@@ -4127,7 +4127,7 @@ index 000000000000..ae5b813f007a
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-ttyS2.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS2.dtsi
 new file mode 100644
-index 000000000000..5fa593ac31a5
+index 0000000..5fa593a
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS2.dtsi
 @@ -0,0 +1,48 @@
@@ -4181,7 +4181,7 @@ index 000000000000..5fa593ac31a5
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-ttyS4.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS4.dtsi
 new file mode 100644
-index 000000000000..1d22a95a23a2
+index 0000000..1d22a95
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS4.dtsi
 @@ -0,0 +1,48 @@
@@ -4235,7 +4235,7 @@ index 000000000000..1d22a95a23a2
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone-pinmux-ttyS5.dtsi b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS5.dtsi
 new file mode 100644
-index 000000000000..01d0aec1de44
+index 0000000..01d0aec
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-bone-pinmux-ttyS5.dtsi
 @@ -0,0 +1,48 @@
@@ -4288,7 +4288,7 @@ index 000000000000..01d0aec1de44
 +	pinctrl-0 = <&uart5_pins>;
 +};
 diff --git a/arch/arm/boot/dts/am335x-bone.dts b/arch/arm/boot/dts/am335x-bone.dts
-index 6b8493720424..3688fff0a5f0 100644
+index 6b84937..3688fff 100644
 --- a/arch/arm/boot/dts/am335x-bone.dts
 +++ b/arch/arm/boot/dts/am335x-bone.dts
 @@ -9,6 +9,7 @@
@@ -4301,7 +4301,7 @@ index 6b8493720424..3688fff0a5f0 100644
  	model = "TI AM335x BeagleBone";
 diff --git a/arch/arm/boot/dts/am335x-boneblack-audio.dts b/arch/arm/boot/dts/am335x-boneblack-audio.dts
 new file mode 100644
-index 000000000000..a938c2c9ed1e
+index 0000000..a938c2c
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-audio.dts
 @@ -0,0 +1,50 @@
@@ -4357,7 +4357,7 @@ index 000000000000..a938c2c9ed1e
 +};
 diff --git a/arch/arm/boot/dts/am335x-boneblack-bbb-exp-c.dts b/arch/arm/boot/dts/am335x-boneblack-bbb-exp-c.dts
 new file mode 100644
-index 000000000000..8d795c06572d
+index 0000000..8d795c0
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-bbb-exp-c.dts
 @@ -0,0 +1,47 @@
@@ -4410,7 +4410,7 @@ index 000000000000..8d795c06572d
 +#include "am335x-cape-bbb-exp-c.dtsi"
 diff --git a/arch/arm/boot/dts/am335x-boneblack-bbb-exp-r.dts b/arch/arm/boot/dts/am335x-boneblack-bbb-exp-r.dts
 new file mode 100644
-index 000000000000..5df881eaac4c
+index 0000000..5df881e
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-bbb-exp-r.dts
 @@ -0,0 +1,47 @@
@@ -4463,7 +4463,7 @@ index 000000000000..5df881eaac4c
 +#include "am335x-cape-bbb-exp-r.dtsi"
 diff --git a/arch/arm/boot/dts/am335x-boneblack-bbbmini.dts b/arch/arm/boot/dts/am335x-boneblack-bbbmini.dts
 new file mode 100644
-index 000000000000..68c5a6bb9b1d
+index 0000000..68c5a6b
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-bbbmini.dts
 @@ -0,0 +1,206 @@
@@ -4675,7 +4675,7 @@ index 000000000000..68c5a6bb9b1d
 +};
 diff --git a/arch/arm/boot/dts/am335x-boneblack-uboot.dts b/arch/arm/boot/dts/am335x-boneblack-uboot.dts
 new file mode 100644
-index 000000000000..738fa396855b
+index 0000000..738fa39
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-uboot.dts
 @@ -0,0 +1,37 @@
@@ -4717,7 +4717,7 @@ index 000000000000..738fa396855b
 +	vmmc-supply = <&vmmcsd_fixed>;
 +};
 diff --git a/arch/arm/boot/dts/am335x-boneblack-wireless.dts b/arch/arm/boot/dts/am335x-boneblack-wireless.dts
-index 83f49f616b19..4664f203b17c 100644
+index 83f49f6..4664f20 100644
 --- a/arch/arm/boot/dts/am335x-boneblack-wireless.dts
 +++ b/arch/arm/boot/dts/am335x-boneblack-wireless.dts
 @@ -11,6 +11,7 @@
@@ -4730,7 +4730,7 @@ index 83f49f616b19..4664f203b17c 100644
  	model = "TI AM335x BeagleBone Black Wireless";
 diff --git a/arch/arm/boot/dts/am335x-boneblack-wl1835mod-cape.dtsi b/arch/arm/boot/dts/am335x-boneblack-wl1835mod-cape.dtsi
 new file mode 100644
-index 000000000000..94caa2290301
+index 0000000..94caa22
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-wl1835mod-cape.dtsi
 @@ -0,0 +1,128 @@
@@ -4864,7 +4864,7 @@ index 000000000000..94caa2290301
 +};
 diff --git a/arch/arm/boot/dts/am335x-boneblack-wl1835mod.dts b/arch/arm/boot/dts/am335x-boneblack-wl1835mod.dts
 new file mode 100644
-index 000000000000..be7cab35a94d
+index 0000000..be7cab3
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-boneblack-wl1835mod.dts
 @@ -0,0 +1,49 @@
@@ -4918,7 +4918,7 @@ index 000000000000..be7cab35a94d
 +
 +#include "am335x-boneblack-wl1835mod-cape.dtsi"
 diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
-index d154d3133c16..e62023252165 100644
+index d154d31..e620232 100644
 --- a/arch/arm/boot/dts/am335x-boneblack.dts
 +++ b/arch/arm/boot/dts/am335x-boneblack.dts
 @@ -10,6 +10,7 @@
@@ -4930,7 +4930,7 @@ index d154d3133c16..e62023252165 100644
  / {
  	model = "TI AM335x BeagleBone Black";
 diff --git a/arch/arm/boot/dts/am335x-boneblue.dts b/arch/arm/boot/dts/am335x-boneblue.dts
-index cdc1b2be792f..472a33d5fc47 100644
+index cdc1b2b..472a33d 100644
 --- a/arch/arm/boot/dts/am335x-boneblue.dts
 +++ b/arch/arm/boot/dts/am335x-boneblue.dts
 @@ -127,6 +127,17 @@
@@ -5008,7 +5008,7 @@ index cdc1b2be792f..472a33d5fc47 100644
  	status = "okay";
  };
 diff --git a/arch/arm/boot/dts/am335x-bonegreen-wireless.dts b/arch/arm/boot/dts/am335x-bonegreen-wireless.dts
-index 57731f0daf10..de299ad8ee40 100644
+index 57731f0..de299ad 100644
 --- a/arch/arm/boot/dts/am335x-bonegreen-wireless.dts
 +++ b/arch/arm/boot/dts/am335x-bonegreen-wireless.dts
 @@ -11,6 +11,7 @@
@@ -5020,7 +5020,7 @@ index 57731f0daf10..de299ad8ee40 100644
  / {
  	model = "TI AM335x BeagleBone Green Wireless";
 diff --git a/arch/arm/boot/dts/am335x-bonegreen.dts b/arch/arm/boot/dts/am335x-bonegreen.dts
-index a8b4d969ce2a..575a5a93a89e 100644
+index a8b4d96..575a5a9 100644
 --- a/arch/arm/boot/dts/am335x-bonegreen.dts
 +++ b/arch/arm/boot/dts/am335x-bonegreen.dts
 @@ -10,6 +10,7 @@
@@ -5033,7 +5033,7 @@ index a8b4d969ce2a..575a5a93a89e 100644
  	model = "TI AM335x BeagleBone Green";
 diff --git a/arch/arm/boot/dts/am335x-cape-bbb-exp-c.dtsi b/arch/arm/boot/dts/am335x-cape-bbb-exp-c.dtsi
 new file mode 100644
-index 000000000000..d2704c692108
+index 0000000..d2704c6
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-cape-bbb-exp-c.dtsi
 @@ -0,0 +1,227 @@
@@ -5266,7 +5266,7 @@ index 000000000000..d2704c692108
 +#include "am335x-bone-pinmux-panel-1024x600-24bit.dtsi"
 diff --git a/arch/arm/boot/dts/am335x-cape-bbb-exp-r.dtsi b/arch/arm/boot/dts/am335x-cape-bbb-exp-r.dtsi
 new file mode 100644
-index 000000000000..539409c9fcd8
+index 0000000..539409c
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-cape-bbb-exp-r.dtsi
 @@ -0,0 +1,217 @@
@@ -5489,7 +5489,7 @@ index 000000000000..539409c9fcd8
 +#include "am335x-bone-pinmux-panel-1024x600-24bit.dtsi"
 diff --git a/arch/arm/boot/dts/am335x-cape-rtc-ds1307.dtsi b/arch/arm/boot/dts/am335x-cape-rtc-ds1307.dtsi
 new file mode 100644
-index 000000000000..bce6ac50cd89
+index 0000000..bce6ac5
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-cape-rtc-ds1307.dtsi
 @@ -0,0 +1,31 @@
@@ -5526,7 +5526,7 @@ index 000000000000..bce6ac50cd89
 +};
 diff --git a/arch/arm/boot/dts/am335x-olimex-som.dts b/arch/arm/boot/dts/am335x-olimex-som.dts
 new file mode 100644
-index 000000000000..2b00ad28340b
+index 0000000..2b00ad2
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-olimex-som.dts
 @@ -0,0 +1,189 @@
@@ -5721,7 +5721,7 @@ index 000000000000..2b00ad28340b
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-can0.dtsi b/arch/arm/boot/dts/am335x-peripheral-can0.dtsi
 new file mode 100644
-index 000000000000..4335e39bf199
+index 0000000..4335e39
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-can0.dtsi
 @@ -0,0 +1,13 @@
@@ -5740,7 +5740,7 @@ index 000000000000..4335e39bf199
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-can1.dtsi b/arch/arm/boot/dts/am335x-peripheral-can1.dtsi
 new file mode 100644
-index 000000000000..02b5bd17066e
+index 0000000..02b5bd1
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-can1.dtsi
 @@ -0,0 +1,13 @@
@@ -5759,7 +5759,7 @@ index 000000000000..02b5bd17066e
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-emmc.dtsi b/arch/arm/boot/dts/am335x-peripheral-emmc.dtsi
 new file mode 100644
-index 000000000000..603f34ec6dc4
+index 0000000..603f34e
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-emmc.dtsi
 @@ -0,0 +1,15 @@
@@ -5780,7 +5780,7 @@ index 000000000000..603f34ec6dc4
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-i2c2.dtsi b/arch/arm/boot/dts/am335x-peripheral-i2c2.dtsi
 new file mode 100644
-index 000000000000..ed9a0b52f913
+index 0000000..ed9a0b5
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-i2c2.dtsi
 @@ -0,0 +1,13 @@
@@ -5799,7 +5799,7 @@ index 000000000000..ed9a0b52f913
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-nxp-hdmi.dtsi b/arch/arm/boot/dts/am335x-peripheral-nxp-hdmi.dtsi
 new file mode 100644
-index 000000000000..1dfd26a691a6
+index 0000000..1dfd26a
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-nxp-hdmi.dtsi
 @@ -0,0 +1,29 @@
@@ -5834,7 +5834,7 @@ index 000000000000..1dfd26a691a6
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-panel-1024x600-24bit.dtsi b/arch/arm/boot/dts/am335x-peripheral-panel-1024x600-24bit.dtsi
 new file mode 100644
-index 000000000000..f7c8f8af499f
+index 0000000..f7c8f8a
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-panel-1024x600-24bit.dtsi
 @@ -0,0 +1,50 @@
@@ -5890,7 +5890,7 @@ index 000000000000..f7c8f8af499f
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-spi0.dtsi b/arch/arm/boot/dts/am335x-peripheral-spi0.dtsi
 new file mode 100644
-index 000000000000..969e35259979
+index 0000000..969e352
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-spi0.dtsi
 @@ -0,0 +1,13 @@
@@ -5909,7 +5909,7 @@ index 000000000000..969e35259979
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-spi1.dtsi b/arch/arm/boot/dts/am335x-peripheral-spi1.dtsi
 new file mode 100644
-index 000000000000..ac5fe97b65d9
+index 0000000..ac5fe97
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-spi1.dtsi
 @@ -0,0 +1,13 @@
@@ -5928,7 +5928,7 @@ index 000000000000..ac5fe97b65d9
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-spi1a.dtsi b/arch/arm/boot/dts/am335x-peripheral-spi1a.dtsi
 new file mode 100644
-index 000000000000..ac5fe97b65d9
+index 0000000..ac5fe97
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-spi1a.dtsi
 @@ -0,0 +1,13 @@
@@ -5947,7 +5947,7 @@ index 000000000000..ac5fe97b65d9
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-ttyS1.dtsi b/arch/arm/boot/dts/am335x-peripheral-ttyS1.dtsi
 new file mode 100644
-index 000000000000..f59fa4c5025f
+index 0000000..f59fa4c
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-ttyS1.dtsi
 @@ -0,0 +1,13 @@
@@ -5966,7 +5966,7 @@ index 000000000000..f59fa4c5025f
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-ttyS2.dtsi b/arch/arm/boot/dts/am335x-peripheral-ttyS2.dtsi
 new file mode 100644
-index 000000000000..a25d6cfcb1d6
+index 0000000..a25d6cf
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-ttyS2.dtsi
 @@ -0,0 +1,13 @@
@@ -5985,7 +5985,7 @@ index 000000000000..a25d6cfcb1d6
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-ttyS4.dtsi b/arch/arm/boot/dts/am335x-peripheral-ttyS4.dtsi
 new file mode 100644
-index 000000000000..adc89f046fbb
+index 0000000..adc89f0
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-ttyS4.dtsi
 @@ -0,0 +1,13 @@
@@ -6004,7 +6004,7 @@ index 000000000000..adc89f046fbb
 +};
 diff --git a/arch/arm/boot/dts/am335x-peripheral-ttyS5.dtsi b/arch/arm/boot/dts/am335x-peripheral-ttyS5.dtsi
 new file mode 100644
-index 000000000000..8b42fb02b9b4
+index 0000000..8b42fb0
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-peripheral-ttyS5.dtsi
 @@ -0,0 +1,13 @@
@@ -6023,7 +6023,7 @@ index 000000000000..8b42fb02b9b4
 +};
 diff --git a/arch/arm/boot/dts/am335x-pocketbeagle.dts b/arch/arm/boot/dts/am335x-pocketbeagle.dts
 new file mode 100644
-index 000000000000..4d984e435297
+index 0000000..4d984e4
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-pocketbeagle.dts
 @@ -0,0 +1,2106 @@
@@ -8135,7 +8135,7 @@ index 000000000000..4d984e435297
 +};
 diff --git a/arch/arm/boot/dts/am335x-sancloud-bbe.dts b/arch/arm/boot/dts/am335x-sancloud-bbe.dts
 new file mode 100644
-index 000000000000..0bd1489897fa
+index 0000000..0bd1489
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-sancloud-bbe.dts
 @@ -0,0 +1,133 @@
@@ -8274,7 +8274,7 @@ index 000000000000..0bd1489897fa
 +};
 diff --git a/arch/arm/boot/dts/am335x-som-common.dtsi b/arch/arm/boot/dts/am335x-som-common.dtsi
 new file mode 100644
-index 000000000000..fb4399b6fb33
+index 0000000..fb4399b
 --- /dev/null
 +++ b/arch/arm/boot/dts/am335x-som-common.dtsi
 @@ -0,0 +1,465 @@
@@ -8744,7 +8744,7 @@ index 000000000000..fb4399b6fb33
 +	};
 +};
 diff --git a/arch/arm/boot/dts/am33xx.dtsi b/arch/arm/boot/dts/am33xx.dtsi
-index e58fab8aec5d..262c26417e0a 100644
+index e58fab8..262c264 100644
 --- a/arch/arm/boot/dts/am33xx.dtsi
 +++ b/arch/arm/boot/dts/am33xx.dtsi
 @@ -154,7 +154,7 @@
@@ -8841,7 +8841,7 @@ index e58fab8aec5d..262c26417e0a 100644
  };
  
 diff --git a/arch/arm/boot/dts/am57xx-beagle-x15-common.dtsi b/arch/arm/boot/dts/am57xx-beagle-x15-common.dtsi
-index 49aeecd312b4..cb21a1b50ab6 100644
+index 49aeecd..cb21a1b 100644
 --- a/arch/arm/boot/dts/am57xx-beagle-x15-common.dtsi
 +++ b/arch/arm/boot/dts/am57xx-beagle-x15-common.dtsi
 @@ -167,6 +167,10 @@
@@ -8856,7 +8856,7 @@ index 49aeecd312b4..cb21a1b50ab6 100644
  	status = "okay";
  	clock-frequency = <400000>;
 diff --git a/arch/arm/boot/dts/dra7.dtsi b/arch/arm/boot/dts/dra7.dtsi
-index 02a136a4661a..b549d5d6a15b 100644
+index 02a136a..b549d5d 100644
 --- a/arch/arm/boot/dts/dra7.dtsi
 +++ b/arch/arm/boot/dts/dra7.dtsi
 @@ -1005,6 +1005,16 @@
@@ -8890,7 +8890,7 @@ index 02a136a4661a..b549d5d6a15b 100644
  		#include "omap4-cpu-thermal.dtsi"
  		#include "omap5-gpu-thermal.dtsi"
 diff --git a/arch/arm/boot/dts/omap3-beagle-xm.dts b/arch/arm/boot/dts/omap3-beagle-xm.dts
-index 683b96a8f73e..9f008ea1c313 100644
+index 683b96a..9f008ea 100644
 --- a/arch/arm/boot/dts/omap3-beagle-xm.dts
 +++ b/arch/arm/boot/dts/omap3-beagle-xm.dts
 @@ -147,6 +147,7 @@
@@ -8982,7 +8982,7 @@ index 683b96a8f73e..9f008ea1c313 100644
  	ti,use-leds;
  	/* pullups: BIT(1) */
 diff --git a/arch/arm/boot/dts/omap3-beagle.dts b/arch/arm/boot/dts/omap3-beagle.dts
-index 4d2eaf843fa9..43fce560f8b4 100644
+index 4d2eaf8..43fce56 100644
 --- a/arch/arm/boot/dts/omap3-beagle.dts
 +++ b/arch/arm/boot/dts/omap3-beagle.dts
 @@ -141,6 +141,7 @@
@@ -9021,7 +9021,7 @@ index 4d2eaf843fa9..43fce560f8b4 100644
  #include "twl4030_omap3.dtsi"
  
 diff --git a/arch/arm/boot/dts/omap4-panda-a4.dts b/arch/arm/boot/dts/omap4-panda-a4.dts
-index f1a6476af371..63b895b85eda 100644
+index f1a6476..63b895b 100644
 --- a/arch/arm/boot/dts/omap4-panda-a4.dts
 +++ b/arch/arm/boot/dts/omap4-panda-a4.dts
 @@ -10,6 +10,18 @@
@@ -9044,7 +9044,7 @@ index f1a6476af371..63b895b85eda 100644
  &dss_hdmi_pins {
  	pinctrl-single,pins = <
 diff --git a/arch/arm/boot/dts/omap4-panda-common.dtsi b/arch/arm/boot/dts/omap4-panda-common.dtsi
-index 2b48e51c372a..9b24216d1f8b 100644
+index 2b48e51..9b24216 100644
 --- a/arch/arm/boot/dts/omap4-panda-common.dtsi
 +++ b/arch/arm/boot/dts/omap4-panda-common.dtsi
 @@ -464,16 +464,6 @@
@@ -9066,7 +9066,7 @@ index 2b48e51c372a..9b24216d1f8b 100644
  	pinctrl-0 = <&mcbsp1_pins>;
 diff --git a/arch/arm/boot/dts/omap4-panda-es-b3.dts b/arch/arm/boot/dts/omap4-panda-es-b3.dts
 new file mode 100644
-index 000000000000..2f1dabcc6adf
+index 0000000..2f1dabc
 --- /dev/null
 +++ b/arch/arm/boot/dts/omap4-panda-es-b3.dts
 @@ -0,0 +1,73 @@
@@ -9144,7 +9144,7 @@ index 000000000000..2f1dabcc6adf
 +	 ti,no-reset-on-init;
 +};
 diff --git a/arch/arm/boot/dts/omap4-panda-es.dts b/arch/arm/boot/dts/omap4-panda-es.dts
-index 940fe4f7c5f6..a5ee1faa760d 100644
+index 940fe4f..a5ee1fa 100644
 --- a/arch/arm/boot/dts/omap4-panda-es.dts
 +++ b/arch/arm/boot/dts/omap4-panda-es.dts
 @@ -15,6 +15,18 @@
@@ -9167,7 +9167,7 @@ index 940fe4f7c5f6..a5ee1faa760d 100644
  &sound {
  	ti,model = "PandaBoardES";
 diff --git a/arch/arm/boot/dts/omap4-panda.dts b/arch/arm/boot/dts/omap4-panda.dts
-index a0e28b2e254e..3ee41ef824c0 100644
+index a0e28b2..3ee41ef 100644
 --- a/arch/arm/boot/dts/omap4-panda.dts
 +++ b/arch/arm/boot/dts/omap4-panda.dts
 @@ -14,3 +14,15 @@
@@ -9187,7 +9187,7 @@ index a0e28b2e254e..3ee41ef824c0 100644
 +	status = "ok";
 +};
 diff --git a/arch/arm/boot/dts/omap4-sdp.dts b/arch/arm/boot/dts/omap4-sdp.dts
-index 280d92d42bf1..05a5f6c3155f 100644
+index 280d92d..05a5f6c 100644
 --- a/arch/arm/boot/dts/omap4-sdp.dts
 +++ b/arch/arm/boot/dts/omap4-sdp.dts
 @@ -502,11 +502,13 @@
@@ -9205,7 +9205,7 @@ index 280d92d42bf1..05a5f6c3155f 100644
  
  &keypad {
 diff --git a/arch/arm/boot/dts/omap4.dtsi b/arch/arm/boot/dts/omap4.dtsi
-index 64d00f5893a6..1e365f285d17 100644
+index 64d00f5..1e365f2 100644
 --- a/arch/arm/boot/dts/omap4.dtsi
 +++ b/arch/arm/boot/dts/omap4.dtsi
 @@ -698,6 +698,7 @@
@@ -9226,7 +9226,7 @@ index 64d00f5893a6..1e365f285d17 100644
  		ocp2scp@4a0ad000 {
 diff --git a/arch/arm/configs/rcn-ee_defconfig b/arch/arm/configs/rcn-ee_defconfig
 new file mode 100644
-index 000000000000..cb7d1e0e8855
+index 0000000..cb7d1e0
 --- /dev/null
 +++ b/arch/arm/configs/rcn-ee_defconfig
 @@ -0,0 +1,2487 @@
@@ -9832,8 +9832,8 @@ index 000000000000..cb7d1e0e8855
 +CONFIG_NET_DEVLINK=m
 +CONFIG_DEVTMPFS=y
 +CONFIG_DEVTMPFS_MOUNT=y
-+CONFIG_EXTRA_FIRMWARE="am335x-pm-firmware.elf am335x-bone-scale-data.bin am335x-evm-scale-data.bin am43x-evm-scale-data.bin"
-+CONFIG_EXTRA_FIRMWARE_DIR="firmware"
++CONFIG_EXTRA_FIRMWARE=""
++CONFIG_EXTRA_FIRMWARE_DIR=""
 +CONFIG_DMA_CMA=y
 +CONFIG_CMA_SIZE_MBYTES=48
 +CONFIG_OMAP_INTERCONNECT=y
@@ -11718,7 +11718,7 @@ index 000000000000..cb7d1e0e8855
 +CONFIG_CORDIC=m
 +CONFIG_IRQ_POLL=y
 diff --git a/arch/arm/include/asm/cacheflush.h b/arch/arm/include/asm/cacheflush.h
-index 74504b154256..62f10c90c0ef 100644
+index 74504b1..62f10c9 100644
 --- a/arch/arm/include/asm/cacheflush.h
 +++ b/arch/arm/include/asm/cacheflush.h
 @@ -140,6 +140,8 @@ extern struct cpu_cache_fns cpu_cache;
@@ -11740,7 +11740,7 @@ index 74504b154256..62f10c90c0ef 100644
  
  #endif
 diff --git a/arch/arm/include/asm/glue-cache.h b/arch/arm/include/asm/glue-cache.h
-index 01c3d92624e5..9f94cba692c0 100644
+index 01c3d92..9f94cba 100644
 --- a/arch/arm/include/asm/glue-cache.h
 +++ b/arch/arm/include/asm/glue-cache.h
 @@ -154,6 +154,8 @@ static inline void nop_dma_unmap_area(const void *s, size_t l, int f) { }
@@ -11753,7 +11753,7 @@ index 01c3d92624e5..9f94cba692c0 100644
  #endif
  
 diff --git a/arch/arm/kernel/setup.c b/arch/arm/kernel/setup.c
-index 8e9a3e40d949..b42460d00706 100644
+index 8e9a3e4..b42460d 100644
 --- a/arch/arm/kernel/setup.c
 +++ b/arch/arm/kernel/setup.c
 @@ -1301,3 +1301,12 @@ const struct seq_operations cpuinfo_op = {
@@ -11770,7 +11770,7 @@ index 8e9a3e40d949..b42460d00706 100644
 +
 +#endif
 diff --git a/arch/arm/mach-omap2/omap_device.c b/arch/arm/mach-omap2/omap_device.c
-index acbede082b5b..a171bc50b957 100644
+index acbede0..a171bc5 100644
 --- a/arch/arm/mach-omap2/omap_device.c
 +++ b/arch/arm/mach-omap2/omap_device.c
 @@ -138,8 +138,8 @@ static int omap_device_build_from_dt(struct platform_device *pdev)
@@ -11846,7 +11846,7 @@ index acbede082b5b..a171bc50b957 100644
  	if (od->_state != OMAP_DEVICE_STATE_ENABLED) {
  		dev_warn(&pdev->dev,
 diff --git a/arch/arm/mach-omap2/pdata-quirks.c b/arch/arm/mach-omap2/pdata-quirks.c
-index 6b433fce65a5..343f22d5885e 100644
+index 6b433fc..343f22d 100644
 --- a/arch/arm/mach-omap2/pdata-quirks.c
 +++ b/arch/arm/mach-omap2/pdata-quirks.c
 @@ -27,6 +27,7 @@
@@ -11883,7 +11883,7 @@ index 6b433fce65a5..343f22d5885e 100644
  	OF_DEV_AUXDATA("ti,omap-dmtimer-pwm", 0, NULL, &pwm_dmtimer_pdata),
  #endif
 diff --git a/arch/arm/mm/dma-mapping.c b/arch/arm/mm/dma-mapping.c
-index fcf1473d6fed..220a669f09f7 100644
+index fcf1473..220a669 100644
 --- a/arch/arm/mm/dma-mapping.c
 +++ b/arch/arm/mm/dma-mapping.c
 @@ -39,7 +39,6 @@
@@ -11896,7 +11896,7 @@ index fcf1473d6fed..220a669f09f7 100644
  struct arm_dma_alloc_args {
 diff --git a/arch/arm/mm/dma.h b/arch/arm/mm/dma.h
 deleted file mode 100644
-index 70ea6852f94e..000000000000
+index 70ea685..0000000
 --- a/arch/arm/mm/dma.h
 +++ /dev/null
 @@ -1,32 +0,0 @@
@@ -11933,7 +11933,7 @@ index 70ea6852f94e..000000000000
 -
 -#endif
 diff --git a/drivers/base/power/opp/of.c b/drivers/base/power/opp/of.c
-index 0b718886479b..754a023d7970 100644
+index 0b71888..754a023 100644
 --- a/drivers/base/power/opp/of.c
 +++ b/drivers/base/power/opp/of.c
 @@ -366,7 +366,7 @@ static int _opp_add_static_v2(struct opp_table *opp_table, struct device *dev,
@@ -11946,7 +11946,7 @@ index 0b718886479b..754a023d7970 100644
  
  /* Initializes OPP tables based on new bindings */
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index 3f80f167ed56..97be900a9b65 100644
+index 3f80f16..97be900 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -61,6 +61,20 @@ config GPIO_SYSFS
@@ -11971,7 +11971,7 @@ index 3f80f167ed56..97be900a9b65 100644
  	depends on HAS_IOMEM # Only for IOMEM drivers
  	tristate
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index aeb70e9de6f2..1c457c7947c5 100644
+index aeb70e9..1c457c7 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -9,6 +9,7 @@ obj-$(CONFIG_GPIOLIB)		+= gpiolib-devprop.o
@@ -11984,7 +11984,7 @@ index aeb70e9de6f2..1c457c7947c5 100644
  obj-$(CONFIG_GPIO_GENERIC)	+= gpio-generic.o
 diff --git a/drivers/gpio/gpio-of-helper.c b/drivers/gpio/gpio-of-helper.c
 new file mode 100644
-index 000000000000..83f362f7da5f
+index 0000000..83f362f
 --- /dev/null
 +++ b/drivers/gpio/gpio-of-helper.c
 @@ -0,0 +1,435 @@
@@ -12424,7 +12424,7 @@ index 000000000000..83f362f7da5f
 +MODULE_LICENSE("GPL");
 +MODULE_ALIAS("platform:gpio-of-helper");
 diff --git a/drivers/gpio/gpiolib-sysfs.c b/drivers/gpio/gpiolib-sysfs.c
-index 3f454eaf2101..e5fa99e57548 100644
+index 3f454ea..e5fa99e 100644
 --- a/drivers/gpio/gpiolib-sysfs.c
 +++ b/drivers/gpio/gpiolib-sysfs.c
 @@ -36,10 +36,10 @@ static DEFINE_MUTEX(sysfs_lock);
@@ -12520,7 +12520,7 @@ index 3f454eaf2101..e5fa99e57548 100644
   * /sys/class/gpio/gpiochipN/
   *   /base ... matching gpio_chip.base (N)
 diff --git a/drivers/gpu/drm/drm_fb_cma_helper.c b/drivers/gpu/drm/drm_fb_cma_helper.c
-index f2ee88363015..7e12672e0205 100644
+index f2ee883..7e12672 100644
 --- a/drivers/gpu/drm/drm_fb_cma_helper.c
 +++ b/drivers/gpu/drm/drm_fb_cma_helper.c
 @@ -27,6 +27,12 @@
@@ -12555,7 +12555,7 @@ index f2ee88363015..7e12672e0205 100644
  	offset = fbi->var.xoffset * bytes_per_pixel;
  	offset += fbi->var.yoffset * fb->pitches[0];
 diff --git a/drivers/gpu/drm/etnaviv/Kconfig b/drivers/gpu/drm/etnaviv/Kconfig
-index 38b477b5fbf9..16ec65e79107 100644
+index 38b477b..16ec65e 100644
 --- a/drivers/gpu/drm/etnaviv/Kconfig
 +++ b/drivers/gpu/drm/etnaviv/Kconfig
 @@ -2,7 +2,7 @@
@@ -12568,7 +12568,7 @@ index 38b477b5fbf9..16ec65e79107 100644
  	select SHMEM
  	select SYNC_FILE
 diff --git a/drivers/gpu/drm/etnaviv/etnaviv_drv.c b/drivers/gpu/drm/etnaviv/etnaviv_drv.c
-index 2cb4773823c2..7634f5baa9e3 100644
+index 2cb4773..7634f5b 100644
 --- a/drivers/gpu/drm/etnaviv/etnaviv_drv.c
 +++ b/drivers/gpu/drm/etnaviv/etnaviv_drv.c
 @@ -651,6 +651,7 @@ static int etnaviv_pdev_remove(struct platform_device *pdev)
@@ -12580,7 +12580,7 @@ index 2cb4773823c2..7634f5baa9e3 100644
  };
  MODULE_DEVICE_TABLE(of, dt_match);
 diff --git a/drivers/gpu/drm/i2c/Kconfig b/drivers/gpu/drm/i2c/Kconfig
-index a6c92beb410a..66ff8e3f7c2e 100644
+index a6c92be..66ff8e3 100644
 --- a/drivers/gpu/drm/i2c/Kconfig
 +++ b/drivers/gpu/drm/i2c/Kconfig
 @@ -1,6 +1,12 @@
@@ -12597,7 +12597,7 @@ index a6c92beb410a..66ff8e3f7c2e 100644
  	tristate "Chrontel ch7006 TV encoder"
  	default m if DRM_NOUVEAU
 diff --git a/drivers/gpu/drm/i2c/Makefile b/drivers/gpu/drm/i2c/Makefile
-index a77acfc1852e..ad171d49d8d4 100644
+index a77acfc..ad171d4 100644
 --- a/drivers/gpu/drm/i2c/Makefile
 +++ b/drivers/gpu/drm/i2c/Makefile
 @@ -6,3 +6,6 @@ obj-$(CONFIG_DRM_I2C_SIL164) += sil164.o
@@ -12609,7 +12609,7 @@ index a77acfc1852e..ad171d49d8d4 100644
 +obj-$(CONFIG_DRM_I2C_ADIHDMI) += adihdmi.o
 diff --git a/drivers/gpu/drm/i2c/adihdmi.h b/drivers/gpu/drm/i2c/adihdmi.h
 new file mode 100644
-index 000000000000..58d9a2b274ea
+index 0000000..58d9a2b
 --- /dev/null
 +++ b/drivers/gpu/drm/i2c/adihdmi.h
 @@ -0,0 +1,289 @@
@@ -12904,7 +12904,7 @@ index 000000000000..58d9a2b274ea
 +#endif /* __DRM_I2C_ADIHDMI_H__ */
 diff --git a/drivers/gpu/drm/i2c/adihdmi_drv.c b/drivers/gpu/drm/i2c/adihdmi_drv.c
 new file mode 100644
-index 000000000000..6ab4682be4b9
+index 0000000..6ab4682
 --- /dev/null
 +++ b/drivers/gpu/drm/i2c/adihdmi_drv.c
 @@ -0,0 +1,1268 @@
@@ -14177,7 +14177,7 @@ index 000000000000..6ab4682be4b9
 +MODULE_DESCRIPTION("ADIHDMI HDMI transmitter driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/gpu/drm/tilcdc/tilcdc_crtc.c b/drivers/gpu/drm/tilcdc/tilcdc_crtc.c
-index 406fe4544b83..ef70c52e0ca4 100644
+index 406fe45..ef70c52 100644
 --- a/drivers/gpu/drm/tilcdc/tilcdc_crtc.c
 +++ b/drivers/gpu/drm/tilcdc/tilcdc_crtc.c
 @@ -66,6 +66,10 @@ struct tilcdc_crtc {
@@ -14235,7 +14235,7 @@ index 406fe4544b83..ef70c52e0ca4 100644
  		}
  
 diff --git a/drivers/gpu/drm/tilcdc/tilcdc_drv.h b/drivers/gpu/drm/tilcdc/tilcdc_drv.h
-index 8caa11bc7aec..6205400c58c8 100644
+index 8caa11b..6205400 100644
 --- a/drivers/gpu/drm/tilcdc/tilcdc_drv.h
 +++ b/drivers/gpu/drm/tilcdc/tilcdc_drv.h
 @@ -182,4 +182,9 @@ int tilcdc_crtc_update_fb(struct drm_crtc *crtc,
@@ -14249,7 +14249,7 @@ index 8caa11bc7aec..6205400c58c8 100644
 +
  #endif /* __TILCDC_DRV_H__ */
 diff --git a/drivers/input/misc/tps65218-pwrbutton.c b/drivers/input/misc/tps65218-pwrbutton.c
-index a4455bb12ae0..b6d4321d421f 100644
+index a4455bb..b6d4321 100644
 --- a/drivers/input/misc/tps65218-pwrbutton.c
 +++ b/drivers/input/misc/tps65218-pwrbutton.c
 @@ -36,7 +36,7 @@ struct tps6521x_data {
@@ -14262,7 +14262,7 @@ index a4455bb12ae0..b6d4321d421f 100644
  
  static const struct tps6521x_data tps65218_data = {
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index 8136dc7e863d..f1c4c891cda3 100644
+index 8136dc7..f1c4c89 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
 @@ -506,6 +506,36 @@ config PCI_ENDPOINT_TEST
@@ -14311,7 +14311,7 @@ index 8136dc7e863d..f1c4c891cda3 100644
  source "drivers/misc/cxl/Kconfig"
  endmenu
 diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
-index d84819dc2468..51f53bcb3f9e 100644
+index d84819d..51f53bc 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
 @@ -42,6 +42,9 @@ obj-y				+= ti-st/
@@ -14334,7 +14334,7 @@ index d84819dc2468..51f53bcb3f9e 100644
  obj-$(CONFIG_CXL_BASE)		+= cxl/
 diff --git a/drivers/misc/bone_capemgr.c b/drivers/misc/bone_capemgr.c
 new file mode 100644
-index 000000000000..0262a46f2a91
+index 0000000..0262a46
 --- /dev/null
 +++ b/drivers/misc/bone_capemgr.c
 @@ -0,0 +1,1898 @@
@@ -16238,7 +16238,7 @@ index 000000000000..0262a46f2a91
 +MODULE_ALIAS("platform:bone_capemgr");
 diff --git a/drivers/misc/cape/Kconfig b/drivers/misc/cape/Kconfig
 new file mode 100644
-index 000000000000..a2ef85e0415c
+index 0000000..a2ef85e
 --- /dev/null
 +++ b/drivers/misc/cape/Kconfig
 @@ -0,0 +1,5 @@
@@ -16249,7 +16249,7 @@ index 000000000000..a2ef85e0415c
 +source "drivers/misc/cape/beaglebone/Kconfig"
 diff --git a/drivers/misc/cape/Makefile b/drivers/misc/cape/Makefile
 new file mode 100644
-index 000000000000..7c4eb96ab29e
+index 0000000..7c4eb96
 --- /dev/null
 +++ b/drivers/misc/cape/Makefile
 @@ -0,0 +1,5 @@
@@ -16260,7 +16260,7 @@ index 000000000000..7c4eb96ab29e
 +obj-y				+= beaglebone/
 diff --git a/drivers/misc/cape/beaglebone/Kconfig b/drivers/misc/cape/beaglebone/Kconfig
 new file mode 100644
-index 000000000000..eeb67828fd82
+index 0000000..eeb6782
 --- /dev/null
 +++ b/drivers/misc/cape/beaglebone/Kconfig
 @@ -0,0 +1,10 @@
@@ -16276,7 +16276,7 @@ index 000000000000..eeb67828fd82
 +	  Say Y here to include support for the pinmux helper
 diff --git a/drivers/misc/cape/beaglebone/Makefile b/drivers/misc/cape/beaglebone/Makefile
 new file mode 100644
-index 000000000000..7f4617a01e26
+index 0000000..7f4617a
 --- /dev/null
 +++ b/drivers/misc/cape/beaglebone/Makefile
 @@ -0,0 +1,5 @@
@@ -16287,7 +16287,7 @@ index 000000000000..7f4617a01e26
 +obj-$(CONFIG_BEAGLEBONE_PINMUX_HELPER)	+= bone-pinmux-helper.o
 diff --git a/drivers/misc/cape/beaglebone/bone-pinmux-helper.c b/drivers/misc/cape/beaglebone/bone-pinmux-helper.c
 new file mode 100644
-index 000000000000..d81363a77b10
+index 0000000..d81363a
 --- /dev/null
 +++ b/drivers/misc/cape/beaglebone/bone-pinmux-helper.c
 @@ -0,0 +1,242 @@
@@ -16535,7 +16535,7 @@ index 000000000000..d81363a77b10
 +MODULE_ALIAS("platform:bone-pinmux-helper");
 diff --git a/drivers/misc/devovmgr.c b/drivers/misc/devovmgr.c
 new file mode 100644
-index 000000000000..d5c8d1db58a7
+index 0000000..d5c8d1d
 --- /dev/null
 +++ b/drivers/misc/devovmgr.c
 @@ -0,0 +1,1306 @@
@@ -17846,7 +17846,7 @@ index 000000000000..d5c8d1db58a7
 +}
 +late_initcall(dovmgr_init);
 diff --git a/drivers/misc/eeprom/at24.c b/drivers/misc/eeprom/at24.c
-index 764ff5df0dbc..ba189bbb9a70 100644
+index 764ff5d..ba189bb 100644
 --- a/drivers/misc/eeprom/at24.c
 +++ b/drivers/misc/eeprom/at24.c
 @@ -593,7 +593,6 @@ static int at24_probe(struct i2c_client *client, const struct i2c_device_id *id)
@@ -17887,7 +17887,7 @@ index 764ff5df0dbc..ba189bbb9a70 100644
  		writable ? "writable" : "read-only", at24->write_max);
 diff --git a/drivers/misc/tieqep.c b/drivers/misc/tieqep.c
 new file mode 100644
-index 000000000000..bb69ad4468e2
+index 0000000..bb69ad4
 --- /dev/null
 +++ b/drivers/misc/tieqep.c
 @@ -0,0 +1,754 @@
@@ -18646,7 +18646,7 @@ index 000000000000..bb69ad4468e2
 +MODULE_AUTHOR("Nathaniel R. Lewis");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/misc/tsl2550.c b/drivers/misc/tsl2550.c
-index adf46072cb37..3fce3b6a3624 100644
+index adf4607..3fce3b6 100644
 --- a/drivers/misc/tsl2550.c
 +++ b/drivers/misc/tsl2550.c
 @@ -177,7 +177,7 @@ static int tsl2550_calculate_lux(u8 ch0, u8 ch1)
@@ -18659,7 +18659,7 @@ index adf46072cb37..3fce3b6a3624 100644
  	/* LUX range check */
  	return lux > TSL2550_MAX_LUX ? TSL2550_MAX_LUX : lux;
 diff --git a/drivers/net/ethernet/ti/davinci_mdio.c b/drivers/net/ethernet/ti/davinci_mdio.c
-index 3c33f4504d8e..f7e5a2886456 100644
+index 3c33f45..f7e5a28 100644
 --- a/drivers/net/ethernet/ti/davinci_mdio.c
 +++ b/drivers/net/ethernet/ti/davinci_mdio.c
 @@ -106,6 +106,10 @@ struct davinci_mdio_data {
@@ -18781,7 +18781,7 @@ index 3c33f4504d8e..f7e5a2886456 100644
  
  #if IS_ENABLED(CONFIG_OF)
 diff --git a/drivers/net/ethernet/wiznet/w5100-spi.c b/drivers/net/ethernet/wiznet/w5100-spi.c
-index 93a2d3c07303..e981d2ab2336 100644
+index 93a2d3c..e981d2a 100644
 --- a/drivers/net/ethernet/wiznet/w5100-spi.c
 +++ b/drivers/net/ethernet/wiznet/w5100-spi.c
 @@ -442,6 +442,21 @@ static int w5100_spi_remove(struct spi_device *spi)
@@ -18821,7 +18821,7 @@ index 93a2d3c07303..e981d2ab2336 100644
  	.probe		= w5100_spi_probe,
  	.remove		= w5100_spi_remove,
 diff --git a/drivers/of/Kconfig b/drivers/of/Kconfig
-index ba7b034b2b91..7d4169e05b1d 100644
+index ba7b034..7d4169e 100644
 --- a/drivers/of/Kconfig
 +++ b/drivers/of/Kconfig
 @@ -112,4 +112,11 @@ config OF_OVERLAY
@@ -18837,7 +18837,7 @@ index ba7b034b2b91..7d4169e05b1d 100644
 +
  endif # OF
 diff --git a/drivers/of/Makefile b/drivers/of/Makefile
-index 97dc01c81438..112e7ab3cae2 100644
+index 97dc01c..112e7ab 100644
 --- a/drivers/of/Makefile
 +++ b/drivers/of/Makefile
 @@ -1,4 +1,5 @@
@@ -18847,7 +18847,7 @@ index 97dc01c81438..112e7ab3cae2 100644
  obj-$(CONFIG_OF_FLATTREE) += fdt.o
  obj-$(CONFIG_OF_EARLY_FLATTREE) += fdt_address.o
 diff --git a/drivers/of/base.c b/drivers/of/base.c
-index 63897531cd75..d9c2907c47ca 100644
+index 6389753..d9c2907 100644
 --- a/drivers/of/base.c
 +++ b/drivers/of/base.c
 @@ -31,6 +31,7 @@
@@ -18955,7 +18955,7 @@ index 63897531cd75..d9c2907c47ca 100644
  	return np;
 diff --git a/drivers/of/configfs.c b/drivers/of/configfs.c
 new file mode 100644
-index 000000000000..c7e999c9d56f
+index 0000000..c7e999c
 --- /dev/null
 +++ b/drivers/of/configfs.c
 @@ -0,0 +1,307 @@
@@ -19267,7 +19267,7 @@ index 000000000000..c7e999c9d56f
 +}
 +late_initcall(of_cfs_init);
 diff --git a/drivers/of/dynamic.c b/drivers/of/dynamic.c
-index 301b6db2b48d..15d22758234a 100644
+index 301b6db..15d2275 100644
 --- a/drivers/of/dynamic.c
 +++ b/drivers/of/dynamic.c
 @@ -13,6 +13,7 @@
@@ -19681,7 +19681,7 @@ index 301b6db2b48d..15d22758234a 100644
 +}
 +EXPORT_SYMBOL_GPL(of_changeset_node_move);
 diff --git a/drivers/of/of_private.h b/drivers/of/of_private.h
-index 3ae12ffbf547..7c2b2aeda44a 100644
+index 3ae12ff..7c2b2ae 100644
 --- a/drivers/of/of_private.h
 +++ b/drivers/of/of_private.h
 @@ -93,9 +93,9 @@ extern int __of_update_property(struct device_node *np,
@@ -19744,7 +19744,7 @@ index 3ae12ffbf547..7c2b2aeda44a 100644
 +
  #endif /* _LINUX_OF_PRIVATE_H */
 diff --git a/drivers/of/overlay.c b/drivers/of/overlay.c
-index 8ecfee31ab6d..7f8cc5c1f426 100644
+index 8ecfee3..7f8cc5c 100644
 --- a/drivers/of/overlay.c
 +++ b/drivers/of/overlay.c
 @@ -21,11 +21,28 @@
@@ -20380,7 +20380,7 @@ index 8ecfee31ab6d..7f8cc5c1f426 100644
 +	return rc;
 +}
 diff --git a/drivers/of/unittest-data/testcases.dts b/drivers/of/unittest-data/testcases.dts
-index 12f7c3d649c8..a6ded1b68964 100644
+index 12f7c3d..a6ded1b 100644
 --- a/drivers/of/unittest-data/testcases.dts
 +++ b/drivers/of/unittest-data/testcases.dts
 @@ -75,5 +75,15 @@
@@ -20400,7 +20400,7 @@ index 12f7c3d649c8..a6ded1b68964 100644
  	};
  }; };
 diff --git a/drivers/of/unittest-data/tests-overlay.dtsi b/drivers/of/unittest-data/tests-overlay.dtsi
-index 02ba56c20fe1..170b04de5614 100644
+index 02ba56c..170b04d 100644
 --- a/drivers/of/unittest-data/tests-overlay.dtsi
 +++ b/drivers/of/unittest-data/tests-overlay.dtsi
 @@ -110,6 +110,30 @@
@@ -20480,7 +20480,7 @@ index 02ba56c20fe1..170b04de5614 100644
  	};
  };
 diff --git a/drivers/of/unittest.c b/drivers/of/unittest.c
-index 29a35cb1da64..47d76d6bc9b8 100644
+index 29a35cb..47d76d6 100644
 --- a/drivers/of/unittest.c
 +++ b/drivers/of/unittest.c
 @@ -24,6 +24,9 @@
@@ -20944,7 +20944,7 @@ index 29a35cb1da64..47d76d6bc9b8 100644
  	/* Double check linkage after removing testcase data */
  	of_unittest_check_tree_linkage();
 diff --git a/drivers/pwm/sysfs.c b/drivers/pwm/sysfs.c
-index a813239300c3..7a7b9d8ae4e5 100644
+index a813239..7a7b9d8 100644
 --- a/drivers/pwm/sysfs.c
 +++ b/drivers/pwm/sysfs.c
 @@ -23,6 +23,8 @@
@@ -21007,7 +21007,7 @@ index a813239300c3..7a7b9d8ae4e5 100644
  	if (IS_ERR(parent)) {
  		dev_warn(chip->dev,
 diff --git a/drivers/spi/spidev.c b/drivers/spi/spidev.c
-index cda10719d1d1..bad88bfb69f2 100644
+index cda1071..bad88bf 100644
 --- a/drivers/spi/spidev.c
 +++ b/drivers/spi/spidev.c
 @@ -724,11 +724,11 @@ static int spidev_probe(struct spi_device *spi)
@@ -21028,7 +21028,7 @@ index cda10719d1d1..bad88bfb69f2 100644
  	spidev_probe_acpi(spi);
  
 diff --git a/drivers/tty/serial/8250/8250_omap.c b/drivers/tty/serial/8250/8250_omap.c
-index 833771bca0a5..42d5f699f424 100644
+index 833771b..42d5f69 100644
 --- a/drivers/tty/serial/8250/8250_omap.c
 +++ b/drivers/tty/serial/8250/8250_omap.c
 @@ -1458,10 +1458,10 @@ static int __init omap8250_console_fixup(void)
@@ -21046,7 +21046,7 @@ index 833771bca0a5..42d5f699f424 100644
  }
  console_initcall(omap8250_console_fixup);
 diff --git a/drivers/tty/serial/omap-serial.c b/drivers/tty/serial/omap-serial.c
-index 7754053deeda..1742fed161bd 100644
+index 7754053..1742fed 100644
 --- a/drivers/tty/serial/omap-serial.c
 +++ b/drivers/tty/serial/omap-serial.c
 @@ -1652,6 +1652,31 @@ static int serial_omap_probe_rs485(struct uart_omap_port *up,
@@ -21103,7 +21103,7 @@ index 7754053deeda..1742fed161bd 100644
  		ret = pdev->id;
  
 diff --git a/drivers/uio/Kconfig b/drivers/uio/Kconfig
-index 7e8dc78a9796..e0c68acc1d94 100644
+index 7e8dc78..e0c68ac 100644
 --- a/drivers/uio/Kconfig
 +++ b/drivers/uio/Kconfig
 @@ -129,7 +129,7 @@ config UIO_PRUSS
@@ -21116,7 +21116,7 @@ index 7e8dc78a9796..e0c68acc1d94 100644
  	  driver is available from below SVN repo - you may use anonymous login
  
 diff --git a/drivers/uio/uio_pruss.c b/drivers/uio/uio_pruss.c
-index 31d5b1d3b5af..2e2277405d80 100644
+index 31d5b1d..2e22774 100644
 --- a/drivers/uio/uio_pruss.c
 +++ b/drivers/uio/uio_pruss.c
 @@ -19,6 +19,7 @@
@@ -21402,1031 +21402,9 @@ index 31d5b1d3b5af..2e2277405d80 100644
  		   },
  };
  
-diff --git a/firmware/am335x-bone-scale-data.bin b/firmware/am335x-bone-scale-data.bin
-new file mode 100644
-index 0000000000000000000000000000000000000000..1ce3c1c596d7a7f400b0cc89bda5a41eed2780c5
-GIT binary patch
-literal 73
-pcmd-HXHZUIU{c}EWl|AfLZWk+R0P|Ad@#)bSHb~R0-{lr003gr3L5|b
-
-literal 0
-HcmV?d00001
-
-diff --git a/firmware/am335x-evm-scale-data.bin b/firmware/am335x-evm-scale-data.bin
-new file mode 100644
-index 0000000000000000000000000000000000000000..a222389d233fa8f1c76ef35470b57284999c8df5
-GIT binary patch
-literal 17
-Ucmd-HXJAiZVA55UX8=>$024d{B>(^b
-
-literal 0
-HcmV?d00001
-
-diff --git a/firmware/am335x-pm-firmware.bin b/firmware/am335x-pm-firmware.bin
-new file mode 100755
-index 0000000000000000000000000000000000000000..7d66669f2dcf03629b562ac7b9b8c590489f2caa
-GIT binary patch
-literal 11324
-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
-BxW51Z
-
-literal 0
-HcmV?d00001
-
-diff --git a/firmware/am335x-pm-firmware.elf b/firmware/am335x-pm-firmware.elf
-new file mode 100755
-index 0000000000000000000000000000000000000000..15b525168bda36ae277239d92415064e717d480a
-GIT binary patch
-literal 217148
-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%0AYr4$s$OSbp*^zc=o<g$(H
-zl5H8h{km%~6Q<sc6PXm$b5ZAeXmD|~V!YBWGbQHCn8LoH;)^vy&ymn8P#Bvvx`_&7
-z<K{RY*G9Sy7qhw`@*5L@F*rNU_c*A9&KK)&VRQt?`CLdl&iAk=bDWRST5C*nj`z#A
-zm;?8J#>GU!H!X|{Xk>hN#-X$ChR)DmiqQE-28=84FkA;t^WzziaWSt5k?DYG%bMQ;
-zhfdKvBQh=~V;lcc4qHO`d0&;%$zSilEN`O&lg=|F<4pN^kCnotcQ`Q9-|4`l^Nh(j
-zlRm)(mbjR-7|)gzX8L{yX8OYpO!_egCY|R^#u@pi9hh{UKe=?CD=17l&!ZHk{HGn5
-zbe>NcXXL*cfib#RdR*E+&)Pq=z7iC|9H(M{DW7Wq;|j9=h_|*k&%2B>`LzW0Vf3}r
-zfhkY>AA2O>7K~BGne>wb{TIkJ<x183cs}Oxzv;lNzZj1&7<s(Y%(w!tOQQ%?9?!Xq
-zGyE?){5LBJq4M(_%Q(ZoD5!sd-1Vqb<*$kGcRMi4%X2K_Z2g_~xE+MafXSlmvE9k<
-zE}N2p=Et)v<BYt79mXhu`SFa(r7wxVhf72HaYPBT|KheMX|GLo{A3U1?G}Vh`HVds
-zcha+cr#bcctc4A~v9Bkb`g{>|by^>unHgvD5AQuS^{ESnWkWw447-MYrvtM*{bD4P
-zXy_RS7W;I{|7CEU2Rv7}jr>;~I{7OC`z!Fi16ZAwpXX`Dne@*%{6AI_LgnXqmvM%_
-zgUS+Dkab6<^7CBFIKzLd12gNx4$ShNc3{$Z&SjiQ|EL3#&T}u9em(*}<dpB{%8F3S
-z$8#~`jQp1znDTi(=F(3D)1GOclMc-Cj}Ppjz})$1Q)_-a8!^u0mvCU_$FmZbzSx0D
-z=h=x%Z**YNd6weRI~<sFo~^j_V-a|!(;sp$))1x&wSON7mK6owgkUT(`egmzaO}^$
-z6H@EXvm4`Vdpa=7$Fm%l{+a`m&a)ktUgN-|*E=xFbHag1=h=>Nw!Iygbe`?F^fw)t
-zbe{DXXVOo0VA6T^<I)=<aKh0q*BXRbPU@FmyDo9`eGT9m2j+8;dIx5@=bZKk*BW7a
-z?Bw7eE+&7qPa(Dk)8ENWkhqxF4*BY|y?9n-oT=|A2WEYFUggq{@^Dj}=^s3&QkeNI
-z!g-UzOwThag-Ji}z@+nh$~cq%Dh~GIjC`I^Da`Z-a2BL6)AKAzVbWi7VA6SZWSo(I
-zLYE&{S@3UYsZ)LMJjb}0_dd{{x92&!9(>iIQ$Ejol>bk`|H}w}4$fVaPJW&TDa`UF
-z9GG;T2^nX~yWN3F=edweKkUGy^PI?~A9rBVd2Zy=&p0sYJV$cr=Ny=Ho-4WZXB?RH
-z=Ny>z^Kc$yoM}&<FDXp=DF>GP9a!4afl252l5s{qO*r>am~@^oDa`bz9hh{UBN=DX
-zKN^Agx7Ccx@y?<>3A^Lt(O?^e`8Hxd%<q`f-=2-onLp2|j5GPa;lQNxjLM~NcVN<a
-zM&;69bYRluAVV08`~(j+EKEAjt&B7DI~|yGo>#f_7af@NmmHY&ecgd2f1EQJXXGz%
-zVA6S}<<hr1FzGzka_P4^FzGz!a_J``@G7VMxRxf&BI^7$KA7(dy#H^6_Tf31E58)y
-zS_(6No{=fc`k!@R(s@Q^oT>k-4oo`F$z1wOoMS0WI?v4%ru@YYOghiej5G3AIWXxw
-zS99q{9hh{Uv$^!ABk-G!{WAX!N1s23z6fi7_$}a02hPD-x*M=rubcJtqG0`m^+d4N
-z4(G4&^TYB?AA#QDtoIj2=&TRV0gW^I7@r7X(ib@}>(k`Gq;GQIs~~?fV5&gJ`x6eG
-z{3jil@*Z_y($6|D=}$W_>CZSY=`T7k=`T4j>9062>90C4>90rN!%lmxMSTcsdu;@K
-z)PY+8-|4`V_omZcy`Zbp^~B-@iivr*k3c`|(8IHau)U`(4AXx$lAiT@BN5VBo-@S}
-zI5>tX@ID_&PyS<${P66;<WKoLKQ%7qokRNn0{B)Sw7nZjLOS_*mTH`_uUj3Mbe^rc
-z^v4~Tbe^@k^p_o&be_Gs^c-h>O*+qFUHUW!CY@)pE`5;$lg_hQmtOC{r1Ol{rEiMB
-z{L?wc<#^9PUxagj;CTAq03UN;p7k7eV6ji9y>R3bIJKt}PJ0!CUJKzh;F^RSE(6T@
-zlyW8lz7p_vu)g4uo%CgZzlp&H*$T`*<NFf~_6ZBO1D=lcYlVdm0=^HGCVw%~e+Y04
-z`DuE-pK=D}Spquq<5}asNBTEydj9#+Pa^#)3-kRH+B3^T{_g`GgYuyWQl1w9{~GI+
-z4h#Q1;7@^B)Bg_eAmnjMV10NNG!x??&oC)(3SinZTY&If!1z1oay~W@rA`9Y^Wp+;
-zlvhU>+&pt4eJx<>SIf5zF!u`z4+5T5YR*@f|3?9T+CFzCJOsE1<16(~n0swke_sLo
-zsBQ0wu!nB~{zbw(XCVLcfWL_Ggj)o{KL<Pu>y>T`qsZ8^g!P#K*p)vU@I(~0!ty5p
-z{}Rel_$t6#A-}=W`L{n(us6+bE8yQG%(EBf-wrs2_SE{^40s{r9k=NZ0XEvEj^f@&
-z06*`P|0LkgVZBEEQQm(9JP~zL`}q#w521bsEd6f)yY=}e!1tidxn*GboLtZQs8il4
-zfL;E%fS+67dG+9D`&UQkD**r6+B4;C0(>*<kMl3#UcjqM%(EcE2LbE(C+qiqz?CQy
-zmqet09PmP?Jf{Iqg#Dhh^#26-2iUJ2weXXG-SWNw_#pJbB`xLsO@#hWfWHELFShjG
-z0_OZreX@QNvDdxRv4>fJzv<{d3E0hVDd0-jy0*uv2z@JH_IYjZUcj5tSc`1_?*lx_
-zX}>!G_dEID2l$tcem@J?&HpT5&Vj1$?*bm<$a@~}ho(TL&F>eH^uHs2X_$U0I{G~@
-z4y{iT@Co!UR1x~g@vZ^<w`i;#R$e3Et$-I;_(s5=Mt@ym;hO=ckXY+`1aJ)NTh;$Z
-z0K4@$3HW)W-(=H&9`JV{U&phr0#?VTJx>Duoui*;0dGa)Uv1O>oatdt*IM|$1MWe4
-za0^BI7&Rt4|0#gK0)1+J?*jajL};H^Mfg_%?m~T(e+%HnmqR!l%eNEo2ON4o;0=y_
-z-wybB^cTJt!Sb8{T<NsOqkvugeA9u+|9!xJf%B^t<VW~rz^5Ghc@6NFocv;_c>mmR
-ze4hmPtTTRIM#aGC_`d*fE&3<l*`)jmz;jXAyTC)Z4zOFk^?(;F4Ck*MfX_PR>5lNf
-z5AZ~kU+wp!5&Hdr{{ro=_V^{h8^Evq={(?4)TajJVgLOe;M>8!z?SbPOrHqb=T*RN
-zd4Csy^I=O|Kf+8zUMb+MD4gbZ72wY~<!J=$%DWNpyJ5dtpH9HPaK?{=Oz-s9Pejsx
-z7O*~VEx@0z{u1EtK-lB9K2MS#{X1#lrvYE#^e6r$JhwbQ1I+VMmY@2`LD@t3qr6Fg
-z`Pc8Xesci7g!Zej{N;dMdG&x}@Th{c{|3av`Tv)1Z3p}p=zkrS-Vb;>JlSY3w;}Qy
-zj7L{m_+G#V9sB$Y;4|~W^8O{@HjGCs57U1iaIM47vvaOdbiVxuz>hoj{42np!u$gj
-zNcy(`w>kYk2W>MK{jbr|@uzdVQQ*<~%>o>A@=F391G?JdQo#J%JKEmY0sb81w^(^8
-zz#WeL_W^eGc^L4|P`-razX$Lqo$;1u|0_{=mH(drp9CF6kn#B2fXk3r?fnJ7zd@U8
-z`DuG@e!m0!Mf6|QXCCVIKBUKg(a#jXUV_%oI_7#sfFE+oe>vb!!>hipLHtvRuz$S=
-zu$x~?1nvU-dCcdlAfN4dGhm(%Yk#{Pa3w0I^|=S|rycwJ4B!~bukHB=;J-y<044J9
-z3L~B$hw~L)A@zO@WprEm^MJX3)cpPla0lRe(AhtJ2lyeRhe?Tk$0F}Mz;p%JJj@3C
-z0obqVw+iqCFe|(Y@Xctfjo@efb^yK)L~XwTz;odhem~;p0{J=KU4Vb#wBP-JyWp2t
-zd7ni*EKiR22;fhlO|?C~0r+|3r}}sfZ~?|g=EwT+S%=#`G3ag?>{so193mVuv_6*t
-zUXAtYcANh~z&}WY{rO73pT_uer=?#Dc%@UG>jAs@bprk*#s>tVpW6_r#d_|9g^vNg
-z)v>ov0=^IYY!B-53xFR&do2RY`g|SmC!O`?i-5VlY!JFH&ssi>@k7U(w?N<NjBl5q
-zZrn4dear;B5U{pS3E)bkPul#i0=x_|R3GaA&xO6>zm#tqV7I<|Bk-+&!}YK4-3yp~
-zPTTJ@fIpA=X#0I0@CTgweG9NF|5?B_&<FmDK7J1P9Qsp@h2H@DHH<H$Q-8V0=pMB9
-zc?(Ymyv|u~l>mO&vHwMY-Ta(CBT}02Zb=RF;nQ1Ok5no*3-W8c;WzpLCEvj6C%E45
-zi`1MyUuFNgliopvx1r3RI<l8WIhR7oi&V(cUif6*t1?$R+4r(==~HkyQ{*nD5wAV6
-zcl5~JIlM&#pS})gsrlhBK5;X@{IV}?zE9K7?wt?Oz@zs|q`mO=3Vhaw`v>G2jPM(O
-z`^}p3{eJeh%I-J1BYuFK#JzZ#WQF;|Uc<gaHq=VFSug9O;H)op&4;u4y{-AWH2jd&
-zTwf4=nHqev>V8og{em?68%^^eXZDwT`f+F0m!9@A084X(=%<A)%IeP1ymFaO9-S`|
-z^?SpSJ}ERfZ`c>gBYpVn=B3%&o6hX#z9Xdyngt(Kk9fm@`;qs^cc++Zg~AJooa^1}
-zC$s!)RO|~`M6OH7?tc1Rvfg~7x9mAL4%mxg%ykEHy9RHVu{WyO^r1mm1l4T}+ujc8
-zwdxy_Y<b-A#!u7rJA8aBOa<~H8%d<#p5ZrVL|aBb$k&R7_clnG^xJBqva0Z|CcQ}@
-zv_`r4g8jl?>{K1z<HRq+ZJC@;!Lu%ev>AkHwATkWu;|SMhI7~jS&PH=l+SzR<9|^I
-zuH2OmviX6ybGL@kqj?F{$aL<Ny1-2YBj4g@su%tI-pbTQqP1pSpeQ#E8m3{lbcMHb
-zShd+sY}mtA7<QSQ_Kx8<JD5RA?n*$L+slg0*dAWvXUiPkH8#SPBiie5>!w~vVUmUS
-zhH-wu-&#s%y6}CoGI6NWTPy4}PSLOVotsc?NkT;!M0HsA;HFbUsSNM_h-zA{s)X*{
-zTTe|(noBh8Kq;>y<En|sZG1N4uq2Q)>^fm1F1(3X<_Gr@5hEp3?67{QpKYV?l34FF
-zQT3tYgg0W?GKHOW*!89(-D04(00$Qs2Nz#h6^1S7P7R_Y%MtcZ+kNCkZ}&Drl;3<_
-zk9&Bv?6&gZJ#t{Om#<p60jriV`=(+$$~dD-WvI&ROGd=FrBu<&NK96XLkkKonh}kg
-zx75=k-sz&PV~ZP(HQDz~x>K6Dmc+T)*=oVD)96h_98~3k-K<+EgWESTioyyo0r939
-zBQ0zXor!ej;<Yn9!QIA&yDDq}PB6jMbhw_tGK5xsfh%yCE?my&#ABy@u|lJE-qI?q
-zCf2M|LZ~;J-!NrFuAYFQL_0#XU~=cJ5my}=u$@t18#Zs}jzG0Bw)(JZifzHdu9bbY
-z>YkDAS~M4}vN!SC7h9HLRU2tF6VB?qwI)<9?%A*-f3W7Y1q)RugSUGrsF*$!*uGb<
-z<>Bp9!DTJ92rLimEgCw`xHkuxESw7<tx-h>E6!!6%S0}`vI0V@#Bj<cpkd=`E;9$&
-z8!6;kW)Ss);_Pcut)$RkS$cc%kGaEBTT!l>gK+k@;WwqrB11-YtG{sEurp$Kv4(R4
-z_6TidbC-pedq=mia#>;MT4jVASxxR?b)379i~xIQsahM&L9d0k7Ij5vlQvH-_bst1
-zdSPf~*p>AfGHX%6+A?|@wL5yrGB+?Id#h5gCIeM&`ZMbXxkX=un_H8t)kM3pne?UT
-zxKh}?JY5VIGTqOF)Wq2CI**uHmQ$O1iLx_BI9FY%d9Y#h3i7N$4|nC6`+xa8((o&H
-z$ty#+o#@DA8!<E?%_QrJc&p}NoyMfD3>%86&6PIpeZ8no<oY$EGJ7wOvxt?Ok!+bl
-z%d**oh!MBC?836M35TiR`hSo(g`2yHRQI-4Sr-<C6KM3NHoYkwqGX`ZLELE|YbC+>
-zW^Bpsi*QuI8>}_Cd;gx@PnnzVg8h^ZZgLTiQ9)HW8(5u$9mqCn#O4g!;;@D6fP)LX
-zY;5?t+U6D5s2ab!6}LD$OPX;<R}^YOfP+6G!KJd;9xsQK1%a(VxOTyr)7y1?r4Ywd
-zIDuA&Z=){PxH%6bR0K~x9J#~g!N+mFCV>3lC{Nsc{3;*M-_FP4az<#$a=ys;Rq&KT
-zc|2#$!{5+8i?}+K$MZGiljk1=I5Bnd)#$Y@AHSoU2tJ&_s#Cu8Kxmva=370WTp?{+
-zgzuV6+?!uIoUb#&x9ddQ`#KLzt<${HfHh81={Muv(?*%Xsk9>zzSr^5%3(YgRHuB$
-zB7B*r;$8{PZ`CQ^Ny}GZ34iiR-1`|1J*^`j{by~ce1}K*UYX@#pnMM_j$-#K>GR-Y
-zTdLE1&jF!v(q0B%_&q>qS2#AcHbpKxbD83M|HVY*S7k8dS-HCIslL~b_TVe!n?a<#
-W6u{##Y?iziulBuKoUN);dH(|rf{7&n
-
-literal 0
-HcmV?d00001
-
-diff --git a/firmware/am43x-evm-scale-data.bin b/firmware/am43x-evm-scale-data.bin
-new file mode 100644
-index 0000000000000000000000000000000000000000..2d71341089816be7989e6dc11b265d9194ac909e
-GIT binary patch
-literal 41
-hcmd-HXAn+dU{VptW>OLB0@CSBDpG9>aG{wnApnMi2I2q!
-
-literal 0
-HcmV?d00001
-
 diff --git a/include/dt-bindings/board/am335x-bbw-bbb-base.h b/include/dt-bindings/board/am335x-bbw-bbb-base.h
 new file mode 100644
-index 000000000000..35f6d57ef492
+index 0000000..35f6d57
 --- /dev/null
 +++ b/include/dt-bindings/board/am335x-bbw-bbb-base.h
 @@ -0,0 +1,103 @@
@@ -22534,7 +21512,7 @@ index 000000000000..35f6d57ef492
 +
 +#endif
 diff --git a/include/linux/of.h b/include/linux/of.h
-index b240ed69dc96..15506ccc6f98 100644
+index b240ed6..15506cc 100644
 --- a/include/linux/of.h
 +++ b/include/linux/of.h
 @@ -23,8 +23,10 @@
@@ -22948,7 +21926,7 @@ index b240ed69dc96..15506ccc6f98 100644
  #endif /* _LINUX_OF_H */
 diff --git a/include/linux/platform_data/sgx-omap.h b/include/linux/platform_data/sgx-omap.h
 new file mode 100644
-index 000000000000..aa59b2c9e5ff
+index 0000000..aa59b2c
 --- /dev/null
 +++ b/include/linux/platform_data/sgx-omap.h
 @@ -0,0 +1,22 @@
@@ -22975,7 +21953,7 @@ index 000000000000..aa59b2c9e5ff
 +	int (*deassert_reset)(struct platform_device *pdev, const char *name);
 +};
 diff --git a/samples/seccomp/Makefile b/samples/seccomp/Makefile
-index bf7cc6b0dc19..edb3fab4d7ff 100644
+index bf7cc6b..edb3fab 100644
 --- a/samples/seccomp/Makefile
 +++ b/samples/seccomp/Makefile
 @@ -20,6 +20,7 @@ bpf-direct-objs := bpf-direct.o
@@ -22992,7 +21970,7 @@ index bf7cc6b0dc19..edb3fab4d7ff 100644
  endif
 +endif
 diff --git a/scripts/package/builddeb b/scripts/package/builddeb
-index 0bc87473f68f..8daf8101b186 100755
+index 0bc8747..8daf810 100755
 --- a/scripts/package/builddeb
 +++ b/scripts/package/builddeb
 @@ -92,10 +92,12 @@ else
@@ -23074,7 +22052,7 @@ index 0bc87473f68f..8daf8101b186 100755
  
  Package: $libc_headers_packagename
 diff --git a/sound/soc/codecs/Kconfig b/sound/soc/codecs/Kconfig
-index c367d11079bc..11fa8aa681bd 100644
+index c367d11..11fa8aa 100644
 --- a/sound/soc/codecs/Kconfig
 +++ b/sound/soc/codecs/Kconfig
 @@ -148,6 +148,7 @@ config SND_SOC_ALL_CODECS
@@ -23096,7 +22074,7 @@ index c367d11079bc..11fa8aa681bd 100644
  	tristate "NXP Semiconductors TFA9879 amplifier"
  	depends on I2C
 diff --git a/sound/soc/codecs/Makefile b/sound/soc/codecs/Makefile
-index 77c18189c9ad..ffefd55e2018 100644
+index 77c1818..ffefd55 100644
 --- a/sound/soc/codecs/Makefile
 +++ b/sound/soc/codecs/Makefile
 @@ -155,6 +155,7 @@ snd-soc-sti-sas-objs := sti-sas.o
@@ -23116,7 +22094,7 @@ index 77c18189c9ad..ffefd55e2018 100644
  obj-$(CONFIG_SND_SOC_TLV320AIC23)	+= snd-soc-tlv320aic23.o
  obj-$(CONFIG_SND_SOC_TLV320AIC23_I2C)	+= snd-soc-tlv320aic23-i2c.o
 diff --git a/sound/soc/codecs/spdif_transmitter.c b/sound/soc/codecs/spdif_transmitter.c
-index 063a64ff82d3..ee188471d154 100644
+index 063a64f..ee18847 100644
 --- a/sound/soc/codecs/spdif_transmitter.c
 +++ b/sound/soc/codecs/spdif_transmitter.c
 @@ -27,7 +27,9 @@
@@ -23132,7 +22110,7 @@ index 063a64ff82d3..ee188471d154 100644
  	SND_SOC_DAPM_OUTPUT("spdif-out"),
 diff --git a/sound/soc/codecs/tdm.c b/sound/soc/codecs/tdm.c
 new file mode 100644
-index 000000000000..f20d3e2060e7
+index 0000000..f20d3e2
 --- /dev/null
 +++ b/sound/soc/codecs/tdm.c
 @@ -0,0 +1,110 @@
@@ -23247,7 +22225,7 @@ index 000000000000..f20d3e2060e7
 +MODULE_LICENSE("GPL");
 +MODULE_ALIAS("platform:" DRV_NAME);
 diff --git a/sound/soc/davinci/davinci-mcasp.c b/sound/soc/davinci/davinci-mcasp.c
-index f395bbc7c354..8601444e775d 100644
+index f395bbc..8601444 100644
 --- a/sound/soc/davinci/davinci-mcasp.c
 +++ b/sound/soc/davinci/davinci-mcasp.c
 @@ -151,6 +151,8 @@ static void mcasp_set_ctl_reg(struct davinci_mcasp *mcasp, u32 ctl_reg, u32 val)
@@ -23509,7 +22487,7 @@ index f395bbc7c354..8601444e775d 100644
  			dev_err(&pdev->dev, "invalid tdm slots: %d\n",
  				pdata->tdm_slots);
 diff --git a/sound/soc/davinci/davinci-mcasp.h b/sound/soc/davinci/davinci-mcasp.h
-index afddc8010c54..ecc33cb675af 100644
+index afddc80..ecc33cb 100644
 --- a/sound/soc/davinci/davinci-mcasp.h
 +++ b/sound/soc/davinci/davinci-mcasp.h
 @@ -82,12 +82,12 @@
@@ -23616,3 +22594,6 @@ index afddc8010c54..ecc33cb675af 100644
  
  /*
   * DAVINCI_MCASP_GBLCTL_REG -  Global Control Register Bits
+-- 
+2.14.2
+
