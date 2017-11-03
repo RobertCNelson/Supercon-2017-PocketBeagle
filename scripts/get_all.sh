@@ -82,4 +82,17 @@ else
 	cd ../
 fi
 
+if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-02/armhf-rootfs-debian-stretch.tar ] ; then
+	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-02/ || true
+	echo "extracting: debian-9.2-iot-armhf-2017-11-02.tar.xz"
+	cd ./rootfs/
+	tar xf debian-9.2-iot-armhf-2017-11-02.tar.xz
+	cd ../
+else
+	echo "extracting: debian-9.2-iot-armhf-2017-11-02.tar.xz"
+	cd ./rootfs/
+	tar xf debian-9.2-iot-armhf-2017-11-02.tar.xz
+	cd ../
+fi
+
 
