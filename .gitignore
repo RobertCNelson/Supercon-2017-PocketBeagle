@@ -8,3 +8,5 @@ deploy/MLO
 deploy/u-boot.img
 deploy/am335x-pocketbeagle.dtb
 deploy/zImage
+deploy/lib/
+deploy/modules.tar.gz

@@ -19,6 +19,14 @@ make -j${CORES} ARCH=arm CROSS_COMPILE=${CC} zImage modules
 
 make ARCH=arm CROSS_COMPILE=${CC} dtbs
 
+make -s ARCH=arm CROSS_COMPILE=${CC} modules_install INSTALL_MOD_PATH=../../deploy/tmp/
+
+cd ../../deploy/tmp/
+tar --create --gzip --file ../modules.tar.gz ./
+cd ../../linux/linux-4.14-rc7/
+
+rm -rf ../../deploy/tmp/
+
 if [ -f arch/arm/boot/zImage ] ; then
 	cp -v arch/arm/boot/zImage ../../deploy/zImage
 fi
