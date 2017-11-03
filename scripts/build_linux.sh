@@ -11,7 +11,8 @@ fi
 make ARCH=arm CROSS_COMPILE=${CC} distclean
 cp -v ../defconfig ./.config
 make ARCH=arm CROSS_COMPILE=${CC} menuconfig
-cp -v ./.config ../defconfig 
-make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage modules
+cp -v ./.config ../defconfig
+#make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage modules
+make ARCH=arm CROSS_COMPILE=${CC} zImage modules
 make ARCH=arm CROSS_COMPILE=${CC} dtbs
 cd ../../
