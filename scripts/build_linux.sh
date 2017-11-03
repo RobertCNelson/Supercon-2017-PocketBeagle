@@ -13,9 +13,9 @@ cp -v ../defconfig ./.config
 make ARCH=arm CROSS_COMPILE=${CC} menuconfig
 cp -v ./.config ../defconfig
 
-make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage modules
+make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage
 
-#make ARCH=arm CROSS_COMPILE=${CC} zImage modules
+#make ARCH=arm CROSS_COMPILE=${CC} zImage
 
 make ARCH=arm CROSS_COMPILE=${CC} dtbs
 
@@ -24,7 +24,7 @@ if [ -f arch/arm/boot/zImage ] ; then
 fi
 
 if [ -f arch/arm/boot/dts/am335x-pocketbeagle.dtb ] ; then
-	cp -v arch/arm/boot/dts/am335x-pocketbeagle.dtb ../../deploy/zImage
+	cp -v arch/arm/boot/dts/am335x-pocketbeagle.dtb ../../deploy/am335x-pocketbeagle.dtb
 fi
 
 cd ../../
