@@ -12,7 +12,21 @@ make ARCH=arm CROSS_COMPILE=${CC} distclean
 cp -v ../defconfig ./.config
 make ARCH=arm CROSS_COMPILE=${CC} menuconfig
 cp -v ./.config ../defconfig
+
 make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage modules
+
 #make ARCH=arm CROSS_COMPILE=${CC} zImage modules
+
 make ARCH=arm CROSS_COMPILE=${CC} dtbs
+
+if [ -f arch/arm/boot/zImage ] ; then
+	cp -v arch/arm/boot/zImage ../../deploy/zImage
+fi
+
+if [ -f arch/arm/boot/dts/am335x-pocketbeagle.dtb ] ; then
+	cp -v arch/arm/boot/dts/am335x-pocketbeagle.dtb ../../deploy/zImage
+fi
+
 cd ../../
+
+ls -lh ./deploy/

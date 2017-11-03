@@ -12,4 +12,15 @@ fi
 make ARCH=arm CROSS_COMPILE=${CC} distclean
 make ARCH=arm CROSS_COMPILE=${CC} am335x_evm_defconfig
 make -j3 ARCH=arm CROSS_COMPILE=${CC}
+
+if [ -f ./MLO ] ; then
+	cp -v ./MLO ../../deploy/MLO
+fi
+
+if [ -f ./u-boot.img ] ; then
+	cp -v ./u-boot.img ../../deploy/u-boot.img
+fi
+
 cd ../../
+
+ls -lh ./deploy/
