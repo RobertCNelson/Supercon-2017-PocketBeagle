@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+CORES=$(getconf _NPROCESSORS_ONLN)
+
 export CC=`pwd`/toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
 
 cd ./linux/linux-4.14-rc7/
@@ -13,9 +15,7 @@ cp -v ../defconfig ./.config
 make ARCH=arm CROSS_COMPILE=${CC} menuconfig
 cp -v ./.config ../defconfig
 
-make -j3 ARCH=arm CROSS_COMPILE=${CC} zImage
-
-#make ARCH=arm CROSS_COMPILE=${CC} zImage
+make -j${CORES} ARCH=arm CROSS_COMPILE=${CC} zImage modules
 
 make ARCH=arm CROSS_COMPILE=${CC} dtbs
 
