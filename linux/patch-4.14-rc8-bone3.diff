@@ -505,7 +505,8 @@ diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
 index faf46ab..a4f6c5d 100644
 --- a/arch/arm/boot/dts/Makefile
 +++ b/arch/arm/boot/dts/Makefile
-@@ -1,11 +1,17 @@
+@@ -1,12 +1,18 @@
+ # SPDX-License-Identifier: GPL-2.0
  ifeq ($(CONFIG_OF),y)
  
 +ifeq ($(CONFIG_OF_OVERLAY),y)
@@ -523,7 +524,7 @@ index faf46ab..a4f6c5d 100644
  # Keep at91 dtb files sorted alphabetically for each SoC
  dtb-$(CONFIG_SOC_AT91RM9200) += \
  	at91rm9200ek.dtb \
-@@ -614,6 +620,16 @@ dtb-$(CONFIG_SOC_AM33XX) += \
+@@ -615,6 +621,16 @@ dtb-$(CONFIG_SOC_AM33XX) += \
  	am335x-base0033.dtb \
  	am335x-bone.dtb \
  	am335x-boneblack.dtb \
@@ -540,7 +541,7 @@ index faf46ab..a4f6c5d 100644
  	am335x-boneblack-wireless.dtb \
  	am335x-boneblue.dtb \
  	am335x-bonegreen.dtb \
-@@ -639,6 +655,7 @@ dtb-$(CONFIG_ARCH_OMAP4) += \
+@@ -640,6 +656,7 @@ dtb-$(CONFIG_ARCH_OMAP4) += \
  	omap4-panda.dtb \
  	omap4-panda-a4.dtb \
  	omap4-panda-es.dtb \
@@ -11899,7 +11900,8 @@ deleted file mode 100644
 index 70ea685..0000000
 --- a/arch/arm/mm/dma.h
 +++ /dev/null
-@@ -1,32 +0,0 @@
+@@ -1,33 +0,0 @@
+-/* SPDX-License-Identifier: GPL-2.0 */
 -#ifndef DMA_H
 -#define DMA_H
 -
@@ -11974,7 +11976,7 @@ diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
 index aeb70e9..1c457c7 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
-@@ -9,6 +9,7 @@ obj-$(CONFIG_GPIOLIB)		+= gpiolib-devprop.o
+@@ -10,6 +10,7 @@ obj-$(CONFIG_GPIOLIB)		+= gpiolib-devprop.o
  obj-$(CONFIG_OF_GPIO)		+= gpiolib-of.o
  obj-$(CONFIG_GPIO_SYSFS)	+= gpiolib-sysfs.o
  obj-$(CONFIG_GPIO_ACPI)		+= gpiolib-acpi.o
@@ -12600,7 +12602,7 @@ diff --git a/drivers/gpu/drm/i2c/Makefile b/drivers/gpu/drm/i2c/Makefile
 index a77acfc..ad171d4 100644
 --- a/drivers/gpu/drm/i2c/Makefile
 +++ b/drivers/gpu/drm/i2c/Makefile
-@@ -6,3 +6,6 @@ obj-$(CONFIG_DRM_I2C_SIL164) += sil164.o
+@@ -7,3 +7,6 @@ obj-$(CONFIG_DRM_I2C_SIL164) += sil164.o
  
  tda998x-y := tda998x_drv.o
  obj-$(CONFIG_DRM_I2C_NXP_TDA998X) += tda998x.o
@@ -14314,7 +14316,7 @@ diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
 index d84819d..51f53bc 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
-@@ -42,6 +42,9 @@ obj-y				+= ti-st/
+@@ -43,6 +43,9 @@ obj-y				+= ti-st/
  obj-y				+= lis3lv02d/
  obj-$(CONFIG_USB_SWITCH_FSA9480) += fsa9480.o
  obj-$(CONFIG_ALTERA_STAPL)	+=altera-stapl/
@@ -14324,7 +14326,7 @@ index d84819d..51f53bc 100644
  obj-$(CONFIG_INTEL_MEI)		+= mei/
  obj-$(CONFIG_VMWARE_VMCI)	+= vmw_vmci/
  obj-$(CONFIG_LATTICE_ECP3_CONFIG)	+= lattice-ecp3-config.o
-@@ -49,6 +52,7 @@ obj-$(CONFIG_SRAM)		+= sram.o
+@@ -50,6 +53,7 @@ obj-$(CONFIG_SRAM)		+= sram.o
  obj-$(CONFIG_SRAM_EXEC)		+= sram-exec.o
  obj-y				+= mic/
  obj-$(CONFIG_GENWQE)		+= genwqe/
@@ -18840,7 +18842,8 @@ diff --git a/drivers/of/Makefile b/drivers/of/Makefile
 index 97dc01c..112e7ab 100644
 --- a/drivers/of/Makefile
 +++ b/drivers/of/Makefile
-@@ -1,4 +1,5 @@
+@@ -1,5 +1,6 @@
+ # SPDX-License-Identifier: GPL-2.0
  obj-y = base.o device.o platform.o property.o
 +obj-$(CONFIG_OF_CONFIGFS) += configfs.o
  obj-$(CONFIG_OF_DYNAMIC) += dynamic.o
@@ -20383,7 +20386,7 @@ diff --git a/drivers/of/unittest-data/testcases.dts b/drivers/of/unittest-data/t
 index 12f7c3d..a6ded1b 100644
 --- a/drivers/of/unittest-data/testcases.dts
 +++ b/drivers/of/unittest-data/testcases.dts
-@@ -75,5 +75,15 @@
+@@ -76,5 +76,15 @@
  				target = <0x00000000>;
  			};
  		};
@@ -20403,7 +20406,7 @@ diff --git a/drivers/of/unittest-data/tests-overlay.dtsi b/drivers/of/unittest-d
 index 02ba56c..170b04d 100644
 --- a/drivers/of/unittest-data/tests-overlay.dtsi
 +++ b/drivers/of/unittest-data/tests-overlay.dtsi
-@@ -110,6 +110,30 @@
+@@ -111,6 +111,30 @@
  						};
  					};
  				};
@@ -20434,7 +20437,7 @@ index 02ba56c..170b04d 100644
  			};
  		};
  
-@@ -325,5 +349,44 @@
+@@ -326,5 +350,44 @@
  			};
  		};
  
@@ -20483,7 +20486,7 @@ diff --git a/drivers/of/unittest.c b/drivers/of/unittest.c
 index 29a35cb..47d76d6 100644
 --- a/drivers/of/unittest.c
 +++ b/drivers/of/unittest.c
-@@ -24,6 +24,9 @@
+@@ -25,6 +25,9 @@
  
  #include <linux/bitops.h>
  
@@ -20493,7 +20496,7 @@ index 29a35cb..47d76d6 100644
  #include "of_private.h"
  
  static struct unittest_results {
-@@ -607,6 +610,59 @@ static void __init of_unittest_changeset(void)
+@@ -608,6 +611,59 @@ static void __init of_unittest_changeset(void)
  #endif
  }
  
@@ -20553,7 +20556,7 @@ index 29a35cb..47d76d6 100644
  static void __init of_unittest_parse_interrupts(void)
  {
  	struct device_node *np;
-@@ -945,7 +1001,7 @@ static int attach_node_and_children(struct device_node *np)
+@@ -946,7 +1002,7 @@ static int attach_node_and_children(struct device_node *np)
  	of_node_clear_flag(np, OF_DETACHED);
  	raw_spin_unlock_irqrestore(&devtree_lock, flags);
  
@@ -20562,7 +20565,7 @@ index 29a35cb..47d76d6 100644
  	mutex_unlock(&of_mutex);
  
  	while (child) {
-@@ -1003,7 +1059,7 @@ static int __init unittest_data_add(void)
+@@ -1004,7 +1060,7 @@ static int __init unittest_data_add(void)
  	if (!of_root) {
  		of_root = unittest_data_node;
  		for_each_of_allnodes(np)
@@ -20571,7 +20574,7 @@ index 29a35cb..47d76d6 100644
  		of_aliases = of_find_node_by_path("/aliases");
  		of_chosen = of_find_node_by_path("/chosen");
  		return 0;
-@@ -1922,6 +1978,273 @@ static inline void of_unittest_overlay_i2c_15(void) { }
+@@ -1923,6 +1979,273 @@ static inline void of_unittest_overlay_i2c_15(void) { }
  
  #endif
  
@@ -20845,7 +20848,7 @@ index 29a35cb..47d76d6 100644
  static void __init of_unittest_overlay(void)
  {
  	struct device_node *bus_np = NULL;
-@@ -1972,6 +2295,12 @@ static void __init of_unittest_overlay(void)
+@@ -1973,6 +2296,12 @@ static void __init of_unittest_overlay(void)
  	of_unittest_overlay_10();
  	of_unittest_overlay_11();
  
@@ -20858,7 +20861,7 @@ index 29a35cb..47d76d6 100644
  #if IS_BUILTIN(CONFIG_I2C)
  	if (unittest(of_unittest_overlay_i2c_init() == 0, "i2c init failed\n"))
  		goto out;
-@@ -2318,6 +2647,70 @@ static inline __init void of_unittest_overlay_high_level(void) {}
+@@ -2319,6 +2648,70 @@ static inline __init void of_unittest_overlay_high_level(void) {}
  
  #endif
  
@@ -20929,7 +20932,7 @@ index 29a35cb..47d76d6 100644
  static int __init of_unittest(void)
  {
  	struct device_node *np;
-@@ -2347,11 +2740,13 @@ static int __init of_unittest(void)
+@@ -2348,11 +2741,13 @@ static int __init of_unittest(void)
  	of_unittest_property_string();
  	of_unittest_property_copy();
  	of_unittest_changeset();
@@ -21956,7 +21959,7 @@ diff --git a/samples/seccomp/Makefile b/samples/seccomp/Makefile
 index bf7cc6b..edb3fab 100644
 --- a/samples/seccomp/Makefile
 +++ b/samples/seccomp/Makefile
-@@ -20,6 +20,7 @@ bpf-direct-objs := bpf-direct.o
+@@ -21,6 +21,7 @@ bpf-direct-objs := bpf-direct.o
  # Try to match the kernel target.
  ifndef CROSS_COMPILE
  ifndef CONFIG_64BIT
@@ -21964,7 +21967,7 @@ index bf7cc6b..edb3fab 100644
  
  # s390 has -m31 flag to build 31 bit binaries
  ifndef CONFIG_S390
-@@ -46,3 +47,4 @@ ifndef CONFIG_MIPS
+@@ -47,3 +48,4 @@ ifndef CONFIG_MIPS
  always := $(hostprogs-m)
  endif
  endif
@@ -22077,7 +22080,7 @@ diff --git a/sound/soc/codecs/Makefile b/sound/soc/codecs/Makefile
 index 77c1818..ffefd55 100644
 --- a/sound/soc/codecs/Makefile
 +++ b/sound/soc/codecs/Makefile
-@@ -155,6 +155,7 @@ snd-soc-sti-sas-objs := sti-sas.o
+@@ -156,6 +156,7 @@ snd-soc-sti-sas-objs := sti-sas.o
  snd-soc-tas5086-objs := tas5086.o
  snd-soc-tas571x-objs := tas571x.o
  snd-soc-tas5720-objs := tas5720.o
@@ -22085,7 +22088,7 @@ index 77c1818..ffefd55 100644
  snd-soc-tfa9879-objs := tfa9879.o
  snd-soc-tlv320aic23-objs := tlv320aic23.o
  snd-soc-tlv320aic23-i2c-objs := tlv320aic23-i2c.o
-@@ -393,6 +394,7 @@ obj-$(CONFIG_SND_SOC_TAS2552)	+= snd-soc-tas2552.o
+@@ -394,6 +395,7 @@ obj-$(CONFIG_SND_SOC_TAS2552)	+= snd-soc-tas2552.o
  obj-$(CONFIG_SND_SOC_TAS5086)	+= snd-soc-tas5086.o
  obj-$(CONFIG_SND_SOC_TAS571X)	+= snd-soc-tas571x.o
  obj-$(CONFIG_SND_SOC_TAS5720)	+= snd-soc-tas5720.o

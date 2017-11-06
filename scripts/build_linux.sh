@@ -4,10 +4,10 @@ CORES=$(getconf _NPROCESSORS_ONLN)
 
 export CC=`pwd`/toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
 
-cd ./linux/linux-4.14-rc7/
+cd ./linux/linux-4.14-rc8/
 
 if [ ! -f ./arch/arm/configs/rcn-ee_defconfig ] ; then
-	patch -p1 < ../patch-4.14-rc7-bone3.diff
+	patch -p1 < ../patch-4.14-rc8-bone3.diff
 fi
 
 make ARCH=arm CROSS_COMPILE=${CC} distclean
@@ -23,7 +23,7 @@ make -s ARCH=arm CROSS_COMPILE=${CC} modules_install INSTALL_MOD_PATH=../../depl
 
 cd ../../deploy/tmp/
 tar --create --gzip --file ../modules.tar.gz ./
-cd ../../linux/linux-4.14-rc7/
+cd ../../linux/linux-4.14-rc8/
 
 rm -rf ../../deploy/tmp/
 

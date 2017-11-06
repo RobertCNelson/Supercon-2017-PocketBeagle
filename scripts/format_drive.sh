@@ -49,22 +49,22 @@ if [ -f ./rootfs/debian-*/armhf-rootfs-*.tar ] ; then
 	sudo chown root:root /media/rootfs/
 	sudo chmod 755 /media/rootfs/
 
-	sudo sh -c "echo 'uname_r=4.14.0-rc7-bone3' > /media/rootfs/boot/uEnv.txt"
+	sudo sh -c "echo 'uname_r=4.14.0-rc8-bone3' > /media/rootfs/boot/uEnv.txt"
 	sudo sh -c "echo 'cmdline=coherent_pool=1M net.ifnames=0 quiet' >> /media/rootfs/boot/uEnv.txt"
 
 	sudo sh -c "echo '/dev/mmcblk0p1  /  auto  errors=remount-ro  0  1' > /media/rootfs/etc/fstab"
 
 	if [ -f ./deploy/zImage ] ; then
 		echo "Copying zImage"
-		sudo cp -v ./deploy/zImage /media/rootfs/boot/vmlinuz-4.14.0-rc7-bone3
+		sudo cp -v ./deploy/zImage /media/rootfs/boot/vmlinuz-4.14.0-rc8-bone3
 	fi
 
 	if [ -f ./deploy/am335x-pocketbeagle.dtb ] ; then
-		if [ ! -d /media/rootfs/boot/dtbs/4.14.0-rc7-bone3/ ] ; then
-			sudo mkdir -p /media/rootfs/boot/dtbs/4.14.0-rc7-bone3/
+		if [ ! -d /media/rootfs/boot/dtbs/4.14.0-rc8-bone3/ ] ; then
+			sudo mkdir -p /media/rootfs/boot/dtbs/4.14.0-rc8-bone3/
 		fi
 		echo "Copying Device Tree Binary"
-		sudo cp -v ./deploy/am335x-pocketbeagle.dtb /media/rootfs/boot/dtbs/4.14.0-rc7-bone3/
+		sudo cp -v ./deploy/am335x-pocketbeagle.dtb /media/rootfs/boot/dtbs/4.14.0-rc8-bone3/
 	fi
 
 	if [ -f ./deploy/modules.tar.gz ] ; then
