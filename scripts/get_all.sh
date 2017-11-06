@@ -8,7 +8,9 @@ dl_web () {
 }
 
 dl_local () {
-	wget --timeout=2 --tries=2 -c --directory-prefix=./${pre}/ ${local_mirror}${pre}/${file} || dl_web
+	if [ ! -f ./${pre}/${file} ] ; then
+		wget --timeout=2 --tries=2 -c --directory-prefix=./${pre}/ ${local_mirror}${pre}/${file} || dl_web
+	fi
 }
 
 if [ ! -d ./toolchain ] ; then
@@ -19,29 +21,21 @@ if [ ! -d ./rootfs ] ; then
 	mkdir ./rootfs/
 fi
 
-if [ ! -f ./toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz ] ; then
-	pre="toolchain"
-	file="gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz"
-	dl_local
-fi
+pre="toolchain"
+file="gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz"
+dl_local
 
-if [ ! -f ./linux/linux-4.14-rc8.tar.gz ] ; then
-	pre="linux"
-	file="linux-4.14-rc8.tar.gz"
-	dl_local
-fi
+pre="linux"
+file="linux-4.14-rc8.tar.gz"
+dl_local
 
-if [ ! -f ./u-boot/u-boot-2017.11-rc3.tar.bz2 ] ; then
-	pre="u-boot"
-	file="u-boot-2017.11-rc3.tar.bz2"
-	dl_local
-fi
+pre="u-boot"
+file="u-boot-2017.11-rc3.tar.bz2"
+dl_local
 
-if [ ! -f ./rootfs/debian-9.2-iot-armhf-2017-11-05.tar.xz ] ; then
-	pre="rootfs"
-	file="debian-9.2-iot-armhf-2017-11-05.tar.xz"
-	dl_local
-fi
+pre="rootfs"
+file="debian-9.2-iot-armhf-2017-11-05.tar.xz"
+dl_local
 
 if [ -f ./toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf/gcc-linaro-6.4.1-2017.08-linux-manifest.txt ] ; then
 	rm -rf ./toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf/ || true
