@@ -2,55 +2,20 @@
 
 . system.sh
 
-kill_systemd_service () {
-	if [ -f /media/rootfs/lib/systemd/system/${service} ] ; then
-		sudo rm -f /media/rootfs/lib/systemd/system/${service}
-	fi
-}
-
-kill_system_service () {
-	if [ -f /media/rootfs/etc/init.d/${service} ] ; then
-		sudo rm -f /media/rootfs/etc/init.d/${service}
-	fi
-}
-
 if [ "x${MMC}" = "x" ] ; then
 	echo "Error, please set MMC in system.sh"
 	exit 1
 fi
 
-sudo dd if=/dev/zero of=${MMC} bs=1M count=10
-
-if [ -f ./deploy/MLO ] ; then
-	sudo dd if=./deploy/MLO of=${MMC} count=1 seek=1 bs=128k
-fi
-if [ -f ./deploy/u-boot.img ] ; then
-	sudo dd if=./deploy/u-boot.img of=${MMC} count=2 seek=1 bs=384k
-fi
-
-sudo sfdisk ${MMC} <<-__EOF__
-4M,,L,*
-__EOF__
-
-sudo mkfs.ext4 -L rootfs ${MMC}1
-
-sleep 5
-
 if [ ! -d /media/rootfs/ ] ; then
 	sudo mkdir -p /media/rootfs/
 fi
 
-sudo mount ${MMC}1 /media/rootfs/
+sudo mount ${MMC}1 /media/rootfs/ || true
 
 sleep 5
 
-if [ -f ./rootfs/debian-*/armhf-rootfs-*.tar ] ; then
-	echo "Copying armhf-rootfs-*.tar"
-	sudo tar xfp ./rootfs/debian-*/armhf-rootfs-*.tar -C /media/rootfs/
-	sync
-	sudo chown root:root /media/rootfs/
-	sudo chmod 755 /media/rootfs/
-
+if [ -f /media/rootfs/etc/fstab ] ; then
 	sudo sh -c "echo 'uname_r=4.14.0-rc8-bone3' > /media/rootfs/boot/uEnv.txt"
 	sudo sh -c "echo 'cmdline=coherent_pool=1M net.ifnames=0 quiet' >> /media/rootfs/boot/uEnv.txt"
 
