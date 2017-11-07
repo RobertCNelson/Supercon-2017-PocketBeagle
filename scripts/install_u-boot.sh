@@ -7,8 +7,6 @@ if [ "x${MMC}" = "x" ] ; then
 	exit 1
 fi
 
-sudo dd if=/dev/zero of=${MMC} bs=1M count=10
-
 if [ -f ./deploy/MLO ] ; then
 	sudo dd if=./deploy/MLO of=${MMC} count=1 seek=1 bs=128k
 fi
