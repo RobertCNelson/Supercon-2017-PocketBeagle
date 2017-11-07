@@ -30,7 +30,7 @@ file="linux-4.14-rc8.tar.gz"
 dl_local
 
 pre="u-boot"
-file="u-boot-2017.11-rc3.tar.bz2"
+file="u-boot-2017.11-rc4.tar.bz2"
 dl_local
 
 pre="rootfs"
@@ -50,16 +50,16 @@ else
 	cd ../
 fi
 
-if [ -f ./u-boot/u-boot-2017.11-rc3/Makefile ] ; then
-	rm -rf ./u-boot/u-boot-2017.11-rc3/ || true
-	echo "extracting: u-boot-2017.11-rc3.tar.bz2"
+if [ -f ./u-boot/u-boot-2017.11-rc4/Makefile ] ; then
+	rm -rf ./u-boot/u-boot-2017.11-rc4/ || true
+	echo "extracting: u-boot-2017.11-rc4.tar.bz2"
 	cd ./u-boot/
-	tar xf u-boot-2017.11-rc3.tar.bz2
+	tar xf u-boot-2017.11-rc4.tar.bz2
 	cd ../
 else
-	echo "extracting: u-boot-2017.11-rc3.tar.bz2"
+	echo "extracting: u-boot-2017.11-rc4.tar.bz2"
 	cd ./u-boot/
-	tar xf u-boot-2017.11-rc3.tar.bz2
+	tar xf u-boot-2017.11-rc4.tar.bz2
 	cd ../
 fi
 
