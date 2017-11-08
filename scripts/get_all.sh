@@ -34,7 +34,7 @@ file="u-boot-2017.11-rc4.tar.bz2"
 dl_local
 
 pre="rootfs"
-file="debian-9.2-iot-armhf-2017-11-05.tar.xz"
+file="debian-9.2-iot-armhf-2017-11-08.tar.xz"
 dl_local
 
 if [ -f ./toolchain/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf/gcc-linaro-6.4.1-2017.08-linux-manifest.txt ] ; then
@@ -76,16 +76,16 @@ else
 	cd ../
 fi
 
-if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-05/armhf-rootfs-debian-stretch.tar ] ; then
-	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-05/ || true
-	echo "extracting: debian-9.2-iot-armhf-2017-11-05.tar.xz"
+if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-08/armhf-rootfs-debian-stretch.tar ] ; then
+	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-08/ || true
+	echo "extracting: debian-9.2-iot-armhf-2017-11-08.tar.xz"
 	cd ./rootfs/
-	tar xf debian-9.2-iot-armhf-2017-11-05.tar.xz
+	tar xf debian-9.2-iot-armhf-2017-11-08.tar.xz
 	cd ../
 else
-	echo "extracting: debian-9.2-iot-armhf-2017-11-05.tar.xz"
+	echo "extracting: debian-9.2-iot-armhf-2017-11-08.tar.xz"
 	cd ./rootfs/
-	tar xf debian-9.2-iot-armhf-2017-11-05.tar.xz
+	tar xf debian-9.2-iot-armhf-2017-11-08.tar.xz
 	cd ../
 fi
 
