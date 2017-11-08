@@ -22,7 +22,7 @@ if [ ! -d ./deploy ] ; then
 fi
 
 pre="rootfs"
-file="debian-9.2-iot-armhf-2017-11-05.tar.xz"
+file="debian-9.2-iot-armhf-2017-11-08.tar.xz"
 dl_local
 
 pre="deploy"
@@ -45,16 +45,16 @@ pre="deploy"
 file="am335x-pocketbeagle.dtb"
 dl_local
 
-if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-05/armhf-rootfs-debian-stretch.tar ] ; then
-	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-05/ || true
-	echo "extracting: debian-9.2-iot-armhf-2017-11-05.tar.xz"
+if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-08/armhf-rootfs-debian-stretch.tar ] ; then
+	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-08/ || true
+	echo "extracting: debian-9.2-iot-armhf-2017-11-08.tar.xz"
 	cd ./rootfs/
-	tar xf debian-9.2-iot-armhf-2017-11-05.tar.xz
+	tar xf debian-9.2-iot-armhf-2017-11-08.tar.xz
 	cd ../
 else
-	echo "extracting: debian-9.2-iot-armhf-2017-11-05.tar.xz"
+	echo "extracting: debian-9.2-iot-armhf-2017-11-08.tar.xz"
 	cd ./rootfs/
-	tar xf debian-9.2-iot-armhf-2017-11-05.tar.xz
+	tar xf debian-9.2-iot-armhf-2017-11-08.tar.xz
 	cd ../
 fi
 
