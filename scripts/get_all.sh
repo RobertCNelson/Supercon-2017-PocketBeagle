@@ -8,9 +8,7 @@ dl_web () {
 }
 
 dl_local () {
-	if [ ! -f ./${pre}/${file} ] ; then
-		wget --progress=bar:force --timeout=2 --tries=2 -c --directory-prefix=./${pre}/ ${local_mirror}${pre}/${file} || dl_web
-	fi
+	wget --progress=bar:force --timeout=2 --tries=2 -c --directory-prefix=./${pre}/ ${local_mirror}${pre}/${file} || dl_web
 }
 
 if [ ! -d ./toolchain ] ; then
