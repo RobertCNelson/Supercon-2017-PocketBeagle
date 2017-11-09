@@ -44,7 +44,7 @@ sudo mount ${MMC}1 /media/rootfs/
 
 sleep 5
 
-if [ -f ./rootfs/debian-*/armhf-rootfs-*.tar ] ; then
+if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-08/armhf-rootfs-*.tar ] ; then
 	echo "Copying armhf-rootfs-*.tar"
 	sudo tar xfp ./rootfs/debian-*/armhf-rootfs-*.tar -C /media/rootfs/
 	sync
