@@ -1,5 +1,5 @@
 #!/bin/bash -e
-
+set -x
 . system.sh
 
 if [ "x${MMC}" = "x" ] ; then
