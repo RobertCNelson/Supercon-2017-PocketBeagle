@@ -1,3 +1,4 @@
 #!/bin/bash
 
-MMC=/dev/sde
+MMC=/dev/sdb
+
