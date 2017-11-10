@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     # Do a clean checkout and build inside VM.
     # Cannot use shared folder because Windows don't support symlinks (without admin rights) and mmap (mkimage fails).
     cd /home/vagrant
-    sudo -u vagrant git clone https://github.com/lucasrangit/Supercon-2017-PocketBeagle.git 
+    sudo -u vagrant -H git clone https://github.com/lucasrangit/Supercon-2017-PocketBeagle.git 
     cd Supercon-2017-PocketBeagle
     sudo -u vagrant ./scripts/get_all.sh
   SHELL
