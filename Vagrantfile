@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
 
     # support USB
-    # if your system has USB 3.0 you *may* need to enable the xHCI controller
+    # if your system has USB 3.0 you *may* need to enable the xHCI controller *instead of* eHCI
     vb.customize ["modifyvm", :id, "--usb", "on"]
     vb.customize ["modifyvm", :id, "--usbehci", "on"]
     #vb.customize ["modifyvm", :id, "--usbxhci", "on"]
