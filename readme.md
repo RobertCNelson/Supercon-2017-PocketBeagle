@@ -20,11 +20,12 @@ The development environment is contained inside a Linux virtual machine. The con
 1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/build_u-boot.sh"`
 1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/build_linux.sh"`
    - Configure the kernel, then Save, and Exit
-1. Insert a microSD card reader and verify it appears inside the guest VM as `sdb` (`vagrant ssh | dmesg | tail`)
+1. Insert a microSD card reader and verify it appears inside the guest VM as `sdb` (`vagrant ssh -c "dmesg | tail"`)
 1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/format_drive.sh"`
 1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/install_u-boot.sh"`
-1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/install_kernel.sh"`
 1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/install_rootfs.sh"`
+1. `vagrant ssh -c "cd Supercon-2017-PocketBeagle; ./scripts/install_kernel.sh"`
+   - Do this last so that kernel is installed into the rootfs.
 
 ## Usage
 
