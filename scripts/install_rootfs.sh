@@ -33,7 +33,7 @@ if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-08/armhf-rootfs-*.tar ] ; then
 	sync
 	sudo chown root:root /media/rootfs/
 	sudo chmod 755 /media/rootfs/
-	sudo cp -v ./example/* /media/rootfs/home/debian/
+	sudo cp -v ./examples/* /media/rootfs/home/debian/
 	sudo chmod +x /media/rootfs/home/debian/*.sh
 
 	sync
