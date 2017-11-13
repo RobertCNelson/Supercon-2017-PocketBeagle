@@ -1,5 +1,9 @@
 # Supercon 2017 PocketBeagle Workshop
 
+## Documention
+
+https://docs.google.com/presentation/d/1Qtep8PPyMClAV48iFnnn-YatNSPEMukMfMRLN2YmIEs/edit?usp=sharing
+
 ## Hardware
 
 Part List: http://www.digikey.com/short/qt08d7
