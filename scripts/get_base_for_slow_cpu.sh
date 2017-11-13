@@ -1,16 +1,9 @@
 #!/bin/bash -e
 
-local_mirror="http://192.168.8.10/"
 web_mirror="http://rcn-ee.online/supercon/"
 
 dl_web () {
-	wget -c --directory-prefix=./${pre}/ ${web_mirror}${pre}/${file}
-}
-
-dl_local () {
-	if [ ! -f ./${pre}/${file} ] ; then
-		wget --timeout=2 --tries=2 -c --directory-prefix=./${pre}/ ${local_mirror}${pre}/${file} || dl_web
-	fi
+	wget --progress=bar:force -c --directory-prefix=./${pre}/ ${web_mirror}${pre}/${file}
 }
 
 if [ ! -d ./rootfs ] ; then
@@ -23,27 +16,27 @@ fi
 
 pre="rootfs"
 file="debian-9.2-iot-armhf-2017-11-08.tar.xz"
-dl_local
+dl_web
 
 pre="deploy"
 file="MLO"
-dl_local
+dl_web
 
 pre="deploy"
 file="u-boot.img"
-dl_local
+dl_web
 
 pre="deploy"
 file="zImage"
-dl_local
+dl_web
 
 pre="deploy"
 file="modules.tar.gz"
-dl_local
+dl_web
 
 pre="deploy"
 file="am335x-pocketbeagle.dtb"
-dl_local
+dl_web
 
 if [ -f ./rootfs/debian-9.2-iot-armhf-2017-11-08/armhf-rootfs-debian-stretch.tar ] ; then
 	rm -rf ./rootfs/debian-9.2-iot-armhf-2017-11-08/ || true
