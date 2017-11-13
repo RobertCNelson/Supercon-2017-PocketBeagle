@@ -1,6 +1,6 @@
 rootfs
 toolchain
-linux/linux*.tar.gz
+linux/linux*.tar.*
 linux/linux*/
 u-boot/u-boot*tar.bz2
 u-boot/u-boot*/

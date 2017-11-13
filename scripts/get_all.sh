@@ -19,7 +19,7 @@ file="gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz"
 dl_web
 
 pre="linux"
-file="linux-4.14-rc8.tar.gz"
+file="linux-4.14.tar.xz"
 dl_web
 
 pre="u-boot"
@@ -56,16 +56,16 @@ else
 	cd ../
 fi
 
-if [ -f ./linux/linux-4.14-rc8/Makefile ] ; then
-	rm -rf ./linux/linux-4.14-rc8/ || true
-	echo "extracting: linux-4.14-rc8.tar.gz"
+if [ -f ./linux/linux-4.14/Makefile ] ; then
+	rm -rf ./linux/linux-4.14/ || true
+	echo "extracting: linux-4.14.tar.xz"
 	cd ./linux/
-	tar xf linux-4.14-rc8.tar.gz
+	tar xf linux-4.14.tar.xz
 	cd ../
 else
-	echo "extracting: linux-4.14-rc8.tar.gz"
+	echo "extracting: linux-4.14.tar.xz"
 	cd ./linux/
-	tar xf linux-4.14-rc8.tar.gz
+	tar xf linux-4.14.tar.xz
 	cd ../
 fi
 
